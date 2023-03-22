@@ -36,13 +36,13 @@
   <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
   <!-- Vendors styles-->
-  <link rel="stylesheet" href="vendors/simplebar/css/simplebar.css">
-  <link rel="stylesheet" href="css/vendors/simplebar.css">
+  <link rel="stylesheet" href="{{ asset('vendors/simplebar/css/simplebar.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/vendors/simplebar.css') }}">
   <!-- Main styles for this application-->
   <link href="{{ asset('css/style.css') }}" rel="stylesheet">
   <!-- We use those styles to show code examples, you should remove them in your application.-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
-  <link href="css/examples.css" rel="stylesheet">
+  <link href="{{ asset('css/examples.css') }}" rel="stylesheet">
   <!-- Global site tag (gtag.js) - Google Analytics-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script>
@@ -109,13 +109,13 @@
     </footer>
   </div>
   <!-- CoreUI and necessary plugins-->
-  <script src="vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
-  <script src="vendors/simplebar/js/simplebar.min.js"></script>
+  <script src="{{ asset('vendors/@coreui/coreui/js/coreui.bundle.min.js') }}"></script>
+  <script src="{{ asset('vendors/simplebar/js/simplebar.min.js') }}"></script>
   <!-- Plugins and scripts required by this view-->
-  <script src="vendors/chart.js/js/chart.min.js"></script>
-  <script src="vendors/@coreui/chartjs/js/coreui-chartjs.js"></script>
-  <script src="vendors/@coreui/utils/js/coreui-utils.js"></script>
-  <script src="js/main.js"></script>
+  <script src="{{ asset('vendors/chart.js/js/chart.min.js') }}"></script>
+  <script src="{{ asset('vendors/@coreui/chartjs/js/coreui-chartjs.js') }}"></script>
+  <script src="{{ asset('vendors/@coreui/utils/js/coreui-utils.js') }}"></script>
+  <script src="{{ asset('js/main.js') }}"></script>
   <script>
   </script>
 
