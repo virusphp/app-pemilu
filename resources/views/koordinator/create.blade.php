@@ -5,41 +5,39 @@ Form
 
 @section('content')
 <div class="container-fluid">
-    <div class="row">
-        <div class="card">
-            <div class="card-header bg-white mt-2">
-                <div class="d-flex justify-content-between"><h4>Data Koordinator</h4>
-                    <a class="btn btn-info btn-sm" href="{{ route('koordinator.create') }}" >+ Tambah</a>
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-white mt-2">
+                    <div class="d-flex justify-content-between"><h4>Tambah Koordinator</h4>
+                    </div>
                 </div>
-            </div>
-            <div class="card-body">
-                <div class="table-responsive">
-                    <table class="table table-striped table-sm table-hover">
-                        <thead>
-                            <tr>
-                                <th>No</th>
-                                <th>Nama Lengkap</th>
-                                <th>Alamat</th>
-                                <th>TPS</th>
-                                <th>Action</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                           <tr >
-                            <td>1</td>
-                            <td>Antok</td>
-                            <td>Slamaran</td>
-                            <td>2</td>
-                            <td>
-                                <button type="button" class="btn btn-warning btn-sm p-1">Edit</button>
-                                <button type="button" class="btn btn-danger btn-sm p-1">Hapus</button>
-                            </td>
-                           </tr>
-                          </tbody>
-                      </table>
-                </div>                
-            </div>            
-        </div>        
+                <div class="card-body">
+                    <form>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Nama</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Alamat</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                          </div>
+                          <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">TPS</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                          </div>
+                        <div class="mb-3 form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </form>
+                </div>            
+            </div>    
+        </div>            
     </div>
   </div>
 @endsection

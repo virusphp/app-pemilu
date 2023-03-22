@@ -39,7 +39,7 @@
   <link rel="stylesheet" href="vendors/simplebar/css/simplebar.css">
   <link rel="stylesheet" href="css/vendors/simplebar.css">
   <!-- Main styles for this application-->
-  <link href="css/style.css" rel="stylesheet">
+  <link href="{{ asset('css/style.css') }}" rel="stylesheet">
   <!-- We use those styles to show code examples, you should remove them in your application.-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
   <link href="css/examples.css" rel="stylesheet">
