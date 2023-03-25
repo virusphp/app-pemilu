@@ -28,17 +28,24 @@ Dashboard
                           </thead>
                           <tbody>
                            <tr >
-                            <td>1</td>
-                            <td>Pembangunan Tempat Ibadah</td>
-                            <td>Bpk Mustakin</td>
-                            <td>Klego</td>
-                            <td>Rp. 20.000.000</td>
-                            <td>Acc</td>
+                            @foreach ($budget as $val)                                
+                           <tr >
+                            <td>{{$loop->iteration}}</td>
+                            <td>{{$val->keperluan}}</td>
+                            <td>{{$val->sumber}}</td>
+                            <td>{{$val->wilayah}}</td>
+                            <td>{{rupiah($val->nominal)}}</td>
+                            <td>{{status($val->status)}}</td>
                             <td>
-                                <button type="button" class="btn btn-warning btn-sm p-1">Edit</button>
-                                <button type="button" class="btn btn-danger btn-sm p-1">Hapus</button>
+                                <form action="{{route('budget.delete', $val->id) }}" method="post">
+                                    @method('DELETE')
+                                    @csrf
+                                    <a type="button" class="btn btn-warning btn-sm p-1" href="{{route('budget.edit', $val->id) }}">Edit</a>
+                                    <button type="submit" class="btn btn-danger btn-sm p-1">Hapus</button>
+                                </form>
                             </td>
                            </tr>
+                           @endforeach
                           </tbody>
                       </table>
                 </div>                
