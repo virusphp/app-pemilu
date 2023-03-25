@@ -9,34 +9,30 @@ Form
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header bg-white mt-2">
-                    <div class="d-flex justify-content-between"><h4>Tambah Koordinator</h4>
+                    <div class="d-flex justify-content-between"><h4>Tambah Users</h4>
                     </div>
                 </div>
                 <div class="card-body">
                     <form>
                       <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">NIK</label>
+                        <label for="nik" class="form-label">ID Tim Sukses</label>
                         <input type="text" class="form-control" id="nik" required>
                       </div>
                         <div class="mb-3">
-                          <label for="exampleInputEmail1" class="form-label">Nama Lengkap</label>
+                          <label for="nama_lengkap" class="form-label">Nama Lengkap</label>
                           <input type="text" class="form-control" id="nama_lengkap" required>
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Alamat</label>
-                            <input type="text" class="form-control" id="alamat" required>
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
                           </div>
                           <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">No. Handphone</label>
-                            <input type="text" class="form-control" id="no_hp" required>
-                          </div>
-                          <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Area</label>
-                            <input type="text" class="form-control" id="area" required>
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" required>
                           </div>
                           
                           <div class="mb-3">
-                            <input type="text" class="form-control" id="jenis_tugas" value="koordinator" readonly hidden>
+                            <input type="text" class="form-control" id="jenis_tugas" value="saksi" readonly hidden>
                           </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                       </form>

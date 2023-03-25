@@ -1,6 +1,15 @@
 <?php
 
 use App\Http\Controllers\Backend\KoordinatorController;
+use App\Http\Controllers\Backend\RelawanController;
+use App\Http\Controllers\Backend\SaksiController;
+use App\Http\Controllers\Backend\PendukungController;
+use App\Http\Controllers\Backend\BudgetController;
+use App\Http\Controllers\Backend\JadwalKegiatanController;
+use App\Http\Controllers\Backend\AspirasiController;
+use App\Http\Controllers\Backend\IssueController;
+use App\Http\Controllers\Backend\DPTController;
+use App\Http\Controllers\Backend\UsersController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,6 +34,34 @@ Route::get('/dashboard', function () {
 
 Route::get('/koordinator', [KoordinatorController::class, 'index'])->name('koordinator.index');
 Route::get('/koordinator/create', [KoordinatorController::class, 'create'])->name('koordinator.create');
+
+Route::get('/relawan', [RelawanController::class, 'index'])->name('relawan.index');
+Route::get('/relawan/create', [RelawanController::class, 'create'])->name('relawan.create');
+
+Route::get('/saksi', [SaksiController::class, 'index'])->name('saksi.index');
+Route::get('/saksi/create', [SaksiController::class, 'create'])->name('saksi.create');
+
+Route::get('/pendukung', [PendukungController::class, 'index'])->name('pendukung.index');
+Route::get('/pendukung/create', [PendukungController::class, 'create'])->name('pendukung.create');
+
+Route::get('/budget', [BudgetController::class, 'index'])->name('budget.index');
+Route::get('/budget/create', [BudgetController::class, 'create'])->name('budget.create');
+
+Route::get('/jadwal_kegiatan', [JadwalKegiatanController::class, 'index'])->name('jadwal_kegiatan.index');
+Route::get('/jadwal_kegiatan/create', [JadwalKegiatanController::class, 'create'])->name('jadwal_kegiatan.create');
+
+Route::get('/aspirasi', [AspirasiController::class, 'index'])->name('aspirasi.index');
+Route::get('/aspirasi/create', [AspirasiController::class, 'create'])->name('aspirasi.create');
+
+Route::get('/issue', [IssueController::class, 'index'])->name('issue.index');
+Route::get('/issue/create', [IssueController::class, 'create'])->name('issue.create');
+
+
+Route::get('/users', [UsersController::class, 'index'])->name('users.index');
+Route::get('/users/create', [UsersController::class, 'create'])->name('users.create');
+
+
+Route::get('/dpt', [DPTController::class, 'index'])->name('dpt.index');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

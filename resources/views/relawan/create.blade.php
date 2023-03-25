@@ -9,7 +9,7 @@ Form
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header bg-white mt-2">
-                    <div class="d-flex justify-content-between"><h4>Tambah Koordinator</h4>
+                    <div class="d-flex justify-content-between"><h4>Tambah Relawan</h4>
                     </div>
                 </div>
                 <div class="card-body">
@@ -36,7 +36,7 @@ Form
                           </div>
                           
                           <div class="mb-3">
-                            <input type="text" class="form-control" id="jenis_tugas" value="koordinator" readonly hidden>
+                            <input type="text" class="form-control" id="jenis_tugas" value="relawan" readonly hidden>
                           </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                       </form>
