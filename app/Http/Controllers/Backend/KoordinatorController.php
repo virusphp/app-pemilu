@@ -16,4 +16,10 @@ class KoordinatorController extends Controller
     {
         return view('koordinator.create');
     }
+
+    public function store(Request $request)
+    {
+        $data = $request->all();
+        
+    }
 }
