@@ -35,13 +35,11 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
-  <!-- Vendors styles-->
-  <link rel="stylesheet" href="{{ asset('css/vendors/simplebar.css') }}">
   <!-- Main styles for this application-->
   <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-  <!-- We use those styles to show code examples, you should remove them in your application.-->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
-  <link href="{{ asset('css/examples.css') }}" rel="stylesheet">
+  {{-- CSS TOAST --}}
+  <link href="{{ asset('vendor/toastify-js/css/toastify.css') }}" rel="stylesheet">
+
   <!-- Global site tag (gtag.js) - Google Analytics-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
@@ -96,11 +94,13 @@
       <div class="ms-auto">Powered by&nbsp;<a href="https://coreui.io/docs/">CoreUI UI Components</a></div>
     </footer>
   </div>
-  <!-- Plugins and scripts required by this view-->
-  <script src="{{ asset('vendor/coreui/js/main.js') }}"></script>
-  <script>
-  </script>
 
+  {{-- Plugin --}}
+  <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
+  <script src="{{ asset('vendor/toastify-js/js/toastify.js') }}"></script>
+  
+  @include('layouts.partials._flash')
+  
 </body>
 
 </html>

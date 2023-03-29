@@ -34,6 +34,7 @@ Route::get('/dashboard', function () {
 
 Route::get('/koordinator', [KoordinatorController::class, 'index'])->name('koordinator.index');
 Route::get('/koordinator/create', [KoordinatorController::class, 'create'])->name('koordinator.create');
+Route::post('/koordinator/store', [KoordinatorController::class, 'store'])->name('koordinator.store');
 
 Route::get('/relawan', [RelawanController::class, 'index'])->name('relawan.index');
 Route::get('/relawan/create', [RelawanController::class, 'create'])->name('relawan.create');

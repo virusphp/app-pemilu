@@ -3,13 +3,16 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\TimSukses;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class KoordinatorController extends Controller
 {
     public function index()
     {
-        return view('koordinator.index');
+        $koordinators = TimSukses::koordinator()->latest()->paginate(5);
+        return view('koordinator.index', compact('koordinators'));
     }
 
     public function create()
@@ -20,6 +23,13 @@ class KoordinatorController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        
+        $timsukses = TimSukses::create($data);
+        if ($timsukses) {
+            Session::flash('data', ['type' => 'success', 'message' => 'Berhasil menambah koordinator']);
+            return redirect()->route('koordinator.index');
+        } else {
+            Session::flash('data', ['type' => 'error', 'message' => 'Gagal menambah data, ada kesalahan server!']);
+            return redirect()->route('koordinator.index');
+        }
     }
 }

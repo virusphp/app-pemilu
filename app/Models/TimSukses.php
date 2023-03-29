@@ -17,4 +17,9 @@ class TimSukses extends Model
         'area',
         'jenis_tugas'
     ];
+
+    public function scopeKoordinator($query)
+    {
+        return $query->where('jenis_tugas', '=', 'koordinator');
+    }
 }

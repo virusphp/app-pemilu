@@ -8,12 +8,7 @@
 
         <div class="row">
 
-             @if ($message = Session::get('success'))
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-                <button type="button" class="btn-close" data-coreui-dismiss="alert" aria-label="Close"></button>
-            </div>
-            @endif
+          @include('koordinator.alert')
 
             <div class="card">
                 <div class="card-header bg-white">
@@ -39,19 +34,22 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($koordinators as $item)
                                 <tr>
-                                    <td>1</td>
-                                    <td>Antok</td>
-                                    <td>Slamaran</td>
-                                    <td>2</td>
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td>{{ $item->nama_lengkap }}</td>
+                                    <td>{{ $item->alamat }}</td>
+                                    <td>{{ $item->area }}</td>
                                     <td>
                                         <button type="button" class="btn btn-warning btn-sm p-1">Edit</button>
                                         <button type="button" class="btn btn-danger btn-sm p-1">Hapus</button>
                                     </td>
                                 </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
+                            {!! $koordinators->links() !!}
                 </div>
             </div>
         </div>
