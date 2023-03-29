@@ -11,7 +11,7 @@ class KoordinatorController extends Controller
 {
     public function index()
     {
-        $koordinators = TimSukses::koordinator()->latest()->paginate(5);
+        $koordinators = TimSukses::koordinator()->latest()->simplePaginate(5);
         return view('koordinator.index', compact('koordinators'));
     }
 
