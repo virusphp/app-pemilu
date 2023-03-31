@@ -22,4 +22,9 @@ class TimSukses extends Model
     {
         return $query->where('jenis_tugas', '=', 'koordinator');
     }
+
+    public function scopeRelawan($query)
+    {
+        return $query->where('jenis_tugas', '=', 'relawan');
+    }
 }

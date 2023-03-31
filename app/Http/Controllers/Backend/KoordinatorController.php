@@ -41,10 +41,28 @@ class KoordinatorController extends Controller
 
     public function update($id, Request $request)
     {
-        dd($request->all());
         $data = $request->except('nik');
         $timsukses = TimSukses::find($id);
         $timsukses->update($data);
-        return redirect()->route('koordinator.index');
+         if ($timsukses) {
+            Session::flash('data', ['type' => 'success', 'message' => 'Berhasil mengubah koordinator']);
+            return redirect()->route('koordinator.index');
+        } else {
+            Session::flash('data', ['type' => 'error', 'message' => 'Gagal mengubah data, ada kesalahan server!']);
+            return redirect()->route('koordinator.index');
+        }
+    }
+
+    public function delete($id)
+    {
+        $timsukses = TimSukses::find($id);
+        $timsukses->delete();
+         if ($timsukses) {
+            Session::flash('data', ['type' => 'success', 'message' => 'Berhasil menghapus koordinator']);
+            return redirect()->route('koordinator.index');
+        } else {
+            Session::flash('data', ['type' => 'error', 'message' => 'Gagal menghapus data, ada kesalahan server!']);
+            return redirect()->route('koordinator.index');
+        }
     }
 }

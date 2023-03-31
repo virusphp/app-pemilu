@@ -41,7 +41,7 @@
                                     <td>{{ $item->alamat }}</td>
                                     <td>{{ $item->area }}</td>
                                     <td>
-                                        <form action="{{route('koordinator.delete', $item->id) }}" method="post">
+                                        <form action="{{ route('koordinator.delete', $item->id) }}" method="post">
                                             @method('DELETE')
                                             @csrf
                                             <a type="button" class="btn btn-warning btn-sm p-1" href="{{route('koordinator.edit', $item->id) }}">Edit</a>

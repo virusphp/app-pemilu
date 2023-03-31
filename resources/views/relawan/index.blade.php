@@ -25,16 +25,22 @@ Dashboard
                             </tr>
                           </thead>
                           <tbody>
-                           <tr >
-                            <td>1</td>
-                            <td>Gandi</td>
-                            <td>Slamaran</td>
-                            <td>2</td>
-                            <td>
-                                <button type="button" class="btn btn-warning btn-sm p-1">Edit</button>
-                                <button type="button" class="btn btn-danger btn-sm p-1">Hapus</button>
-                            </td>
-                           </tr>
+                            @foreach ($relawans as $item)
+                            <tr>
+                                <td>{{ $loop->iteration }}</td>
+                                <td>{{ $item->nama_lengkap }}</td>
+                                <td>{{ $item->alamat }}</td>
+                                <td>{{ $item->area }}</td>
+                                <td>
+                                    <form action="{{ route('koordinator.delete', $item->id) }}" method="post">
+                                        @method('DELETE')
+                                        @csrf
+                                        <a type="button" class="btn btn-warning btn-sm p-1" href="{{route('koordinator.edit', $item->id) }}">Edit</a>
+                                        <button type="submit" class="btn btn-danger btn-sm p-1">Hapus</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            @endforeach
                           </tbody>
                       </table>
                 </div>                
