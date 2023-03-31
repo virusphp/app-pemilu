@@ -32,4 +32,19 @@ class KoordinatorController extends Controller
             return redirect()->route('koordinator.index');
         }
     }
+
+    public function edit($id)
+    {
+        $timsukses = TimSukses::find($id);
+        return view('koordinator.edit', compact('timsukses'));
+    }
+
+    public function update($id, Request $request)
+    {
+        dd($request->all());
+        $data = $request->except('nik');
+        $timsukses = TimSukses::find($id);
+        $timsukses->update($data);
+        return redirect()->route('koordinator.index');
+    }
 }

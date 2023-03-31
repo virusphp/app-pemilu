@@ -41,8 +41,12 @@
                                     <td>{{ $item->alamat }}</td>
                                     <td>{{ $item->area }}</td>
                                     <td>
-                                        <button type="button" class="btn btn-warning btn-sm p-1">Edit</button>
-                                        <button type="button" class="btn btn-danger btn-sm p-1">Hapus</button>
+                                        <form action="{{route('koordinator.delete', $item->id) }}" method="post">
+                                            @method('DELETE')
+                                            @csrf
+                                            <a type="button" class="btn btn-warning btn-sm p-1" href="{{route('koordinator.edit', $item->id) }}">Edit</a>
+                                            <button type="submit" class="btn btn-danger btn-sm p-1">Hapus</button>
+                                        </form>
                                     </td>
                                 </tr>
                                 @endforeach
