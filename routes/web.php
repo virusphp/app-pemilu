@@ -47,6 +47,10 @@ Route::get('/pendukung/create', [PendukungController::class, 'create'])->name('p
 
 Route::get('/budget', [BudgetController::class, 'index'])->name('budget.index');
 Route::get('/budget/create', [BudgetController::class, 'create'])->name('budget.create');
+Route::post('/budget/store', [BudgetController::class, 'store'])->name('budget.store');
+Route::delete('/budget/delete/{id}', [BudgetController::class, 'delete'])->name('budget.delete');
+Route::get('/budget/edit/{id}', [BudgetController::class, 'edit'])->name('budget.edit');
+Route::put('/budget/update/{id}', [BudgetController::class, 'update'])->name('budget.update');
 
 Route::get('/jadwal_kegiatan', [JadwalKegiatanController::class, 'index'])->name('jadwal_kegiatan.index');
 Route::get('/jadwal_kegiatan/create', [JadwalKegiatanController::class, 'create'])->name('jadwal_kegiatan.create');
