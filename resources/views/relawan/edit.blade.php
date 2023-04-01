@@ -13,7 +13,7 @@ Form
                     </div>
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('koordinator.update', $timsukses->id) }}" method="POST">
+                    <form action="{{ route('relawan.update', $timsukses->id) }}" method="POST">
                       @csrf
                       @method("PUT")
                       <div class="mb-3">
@@ -38,9 +38,9 @@ Form
                           </div>
                           
                           <div class="mb-3">
-                            <input type="hidden" class="form-control" id="jenis_tugas" name="jenis_tugas" value="koordinator" readonly>
+                            <input type="hidden" class="form-control" id="jenis_tugas" name="jenis_tugas" value="relawan" readonly>
                           </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-warning">Update</button>
                       </form>
                 </div>            
             </div>    

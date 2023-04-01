@@ -39,9 +39,13 @@ Route::get('/koordinator/edit/{id}', [KoordinatorController::class, 'edit'])->na
 Route::put('/koordinator/update/{id}', [KoordinatorController::class, 'update'])->name('koordinator.update');
 Route::delete('/koordinator/delete/{id}', [KoordinatorController::class, 'delete'])->name('koordinator.delete');
 
+
 Route::get('/relawan', [RelawanController::class, 'index'])->name('relawan.index');
 Route::get('/relawan/create', [RelawanController::class, 'create'])->name('relawan.create');
 Route::post('/relawan/store', [RelawanController::class, 'store'])->name('relawan.store');
+Route::get('/relawan/edit/{id}', [RelawanController::class, 'edit'])->name('relawan.edit');
+Route::put('/relawan/update/{id}', [RelawanController::class, 'update'])->name('relawan.update');
+Route::delete('/relawan/delete/{id}', [RelawanController::class, 'delete'])->name('relawan.delete');
 
 Route::get('/saksi', [SaksiController::class, 'index'])->name('saksi.index');
 Route::get('/saksi/create', [SaksiController::class, 'create'])->name('saksi.create');

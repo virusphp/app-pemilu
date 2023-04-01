@@ -40,7 +40,7 @@ Form
                           <div class="mb-3">
                             <input type="hidden" class="form-control" id="jenis_tugas" name="jenis_tugas" value="koordinator" readonly>
                           </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-warning">Update</button>
                       </form>
                 </div>            
             </div>    

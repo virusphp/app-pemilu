@@ -7,9 +7,14 @@ Dashboard
 <div class="container-fluid">
     <div class="row">
         <div class="card">
-            <div class="card-header bg-white mt-2">
-                <div class="d-flex justify-content-between"><h4>Data Relawan</h4>
-                    <a type="button" class="btn btn-info btn-sm" href="{{route('relawan.create') }}" >+ Tambah</a>
+            <div class="card-header bg-white">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <h4>Data Relawan</h4>
+                    </div>
+                    <div>
+                        <a type="button" class="btn btn-info btn-sm" href="{{ route('relawan.create') }}">+Tambah</a>
+                    </div>
                 </div>
             </div>
             <div class="card-body">
@@ -32,10 +37,10 @@ Dashboard
                                 <td>{{ $item->alamat }}</td>
                                 <td>{{ $item->area }}</td>
                                 <td>
-                                    <form action="{{ route('koordinator.delete', $item->id) }}" method="post">
+                                    <form action="{{ route('relawan.delete', $item->id) }}" method="post">
                                         @method('DELETE')
                                         @csrf
-                                        <a type="button" class="btn btn-warning btn-sm p-1" href="{{route('koordinator.edit', $item->id) }}">Edit</a>
+                                        <a type="button" class="btn btn-warning btn-sm p-1" href="{{route('relawan.edit', $item->id) }}">Edit</a>
                                         <button type="submit" class="btn btn-danger btn-sm p-1">Hapus</button>
                                     </form>
                                 </td>
