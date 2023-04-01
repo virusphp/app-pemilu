@@ -53,9 +53,14 @@ Route::put('/budget/update/{id}', [BudgetController::class, 'update'])->name('bu
 
 Route::get('/jadwal_kegiatan', [JadwalKegiatanController::class, 'index'])->name('jadwal_kegiatan.index');
 Route::get('/jadwal_kegiatan/create', [JadwalKegiatanController::class, 'create'])->name('jadwal_kegiatan.create');
+Route::post('/jadwal_kegiatan/store', [JadwalKegiatanController::class, 'store'])->name('jadwal_kegiatan.store');
+Route::delete('/jadwal_kegiatan/delete/{id}', [JadwalKegiatanController::class, 'delete'])->name('jadwal_kegiatan.delete');
+Route::get('/jadwal_kegiatan/edit/{id}', [JadwalKegiatanController::class, 'edit'])->name('jadwal_kegiatan.edit');
+Route::put('/jadwal_kegiatan/update/{id}', [JadwalKegiatanController::class, 'update'])->name('jadwal_kegiatan.update');
 
 Route::get('/aspirasi', [AspirasiController::class, 'index'])->name('aspirasi.index');
 Route::get('/aspirasi/create', [AspirasiController::class, 'create'])->name('aspirasi.create');
+Route::post('/aspirasi/store', [AspirasiController::class, 'store'])->name('aspirasi.store');
 
 Route::get('/issue', [IssueController::class, 'index'])->name('issue.index');
 Route::get('/issue/create', [IssueController::class, 'create'])->name('issue.create');

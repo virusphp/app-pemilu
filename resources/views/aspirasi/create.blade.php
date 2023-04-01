@@ -16,24 +16,24 @@ Form
                     <form>
                       <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Detail Aspirasi</label>
-                        <input type="text" class="form-control" id="detail" required>
+                        <input type="text" class="form-control" name="detail" required>
                       </div>
                         <div class="mb-3">
                           <label for="exampleInputEmail1" class="form-label">Sumber</label>
-                          <input type="text" class="form-control" id="sumber" required>
+                          <input type="text" class="form-control" name="sumber" required>
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Wilayah</label>
-                            <input type="text" class="form-control" id="wilayah" required>
+                            <input type="text" class="form-control" name="wilayah" required>
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Solusi</label>
-                            <input type="text" class="form-control" id="solusi" required>
+                            <input type="text" class="form-control" name="solusi" required>
                         </div>
                         <div class="mb-3">
                           <div class="form-group">
                               <label>Status</label>
-                              <select class="form-control" id="status">
+                              <select class="form-control" name="status">
                                 <option value="1">Acc</option>
                                 <option value="2">Pending</option>
                                 <option value="3">Tolak</option>
@@ -42,10 +42,10 @@ Form
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Tanggal Pelaksanaan Solusi</label>
-                            <input type="date" class="form-control" id="tanggal_pelaksanaan_solusi">
+                            <input type="date" class="form-control" name="tanggal_pelaksanaan_solusi">
                         </div>
                         <div class="mb-3">
-                            <input type="text" class="form-control" id="jenis" value="aspirasi" hidden required>
+                            <input type="text" class="form-control" name="jenis" value="aspirasi" hidden required>
                         </div>
                         <div class="form-group">
                         <button type="submit" class="btn btn-primary">Submit</button>

@@ -2,6 +2,9 @@
 @section('title')
 Dashboard
 @endsection
+@section('breadcrumb')
+Dashboard
+@endsection
 
 @section('content')
 <div class="container-lg">

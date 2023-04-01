@@ -1,6 +1,9 @@
 @extends('layouts.backend')
 @section('title')
-Dashboard
+Budgeting
+@endsection
+@section('breadcrumb')
+Budgeting
 @endsection
 
 @section('content')

@@ -27,18 +27,24 @@ Dashboard
                             </tr>
                           </thead>
                           <tbody>
+                            @foreach ($jadwal_kegiatan as $val) 
                            <tr >
-                            <td>1</td>
-                            <td>31 April 2023</td>
-                            <td>18.00 WIB</td>
-                            <td>Penyuluhan Pemilu</td>
-                            <td>RT 04 perum slaamaran</td>
-                            <td>Penyuluhan</td>
-                            <td>Ya</td>
-                            <td>
-                                <button type="button" class="btn btn-warning btn-sm p-1">Edit</button>
-                                <button type="button" class="btn btn-danger btn-sm p-1">Hapus</button>
+                            <td>{{$loop->iteration}}</td>
+                            <td>{{$val->tgl_kegiatan}}</td>
+                            <td>{{$val->jam_kegiatan}}</td>
+                            <td>{{$val->nama_kegiatan}}</td>
+                            <td>{{$val->tempat_kegiatan}}</td>
+                            <td>{{$val->jenis_kegiatan}}</td>
+                            <td>{{$val->visibilitas}}</td>
+                            <td>                                
+                                <form action="{{route('jadwal_kegiatan.delete', $val->id) }}" method="post">
+                                    @method('DELETE')
+                                    @csrf
+                                    <a type="button" class="btn btn-warning btn-sm p-1" href="{{route('jadwal_kegiatan.edit', $val->id) }}">Edit</a>
+                                    <button type="submit" class="btn btn-danger btn-sm p-1">Hapus</button>
+                                </form>
                             </td>
+                            @endforeach
                            </tr>
                           </tbody>
                       </table>
