@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('detail');
             $table->string('sumber');
             $table->string('solusi');
+            $table->string('status', 1);
             $table->string('wilayah');
             $table->string('jenis');
             $table->date('tanggal_pelaksanaan_solusi');

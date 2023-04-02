@@ -12,6 +12,7 @@ class issue_aspirasi extends Model
         'detail',
         'sumber',
         'solusi',
+        'status',
         'wilayah',
         'jenis',
         'tanggal_pelaksanaan_solusi'

@@ -13,7 +13,8 @@ Form
                     </div>
                 </div>
                 <div class="card-body">
-                    <form>
+                  <form action="{{route('aspirasi.store')}}" method="post">
+                    @csrf
                       <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Detail Aspirasi</label>
                         <input type="text" class="form-control" name="detail" required>

@@ -16,7 +16,7 @@ Dashboard
                 <div class="table-responsive">
                     <table class="table table-striped table-sm table-hover">
                         <thead>
-                            <tr>
+                            <tr>                              
                                 <th>No</th>
                                 <th>Detail Aspirasi</th>
                                 <th>Sumber</th>
@@ -29,18 +29,24 @@ Dashboard
                           </thead>
                           <tbody>
                            <tr >
-                            <td>1</td>
-                            <td>Meminta Jalan Desa Di Perbaiki</td>
-                            <td>Bpk Furqon</td>
-                            <td>Slamaran</td>
-                            <td>Acc</td>
-                            <td>Jalan Diperbaiki sepanjang 200 meter, dengan anggaran 25 juta</td>
-                            <td>20 September 2023</td>
+                            @foreach ($aspirasi as $val)    
+                            <td>{{$loop->iteration}}</td>
+                            <td>{{$val->detail}}</td>
+                            <td>{{$val->sumber}}</td>
+                            <td>{{$val->wilayah}}</td>
+                            <td>{{$val->status}}</td>
+                            <td>{{$val->solusi}}</td>
+                            <td>{{$val->tanggal_pelaksanaan_solusi}}</td>
                             <td>
-                                <button type="button" class="btn btn-warning btn-sm p-1">Edit</button>
-                                <button type="button" class="btn btn-danger btn-sm p-1">Hapus</button>
+                                <form action="{{route('aspirasi.delete', $val->id) }}" method="post">
+                                    @method('DELETE')
+                                    @csrf
+                                    <a type="button" class="btn btn-warning btn-sm p-1" href="{{route('aspirasi.edit', $val->id) }}">Edit</a>
+                                    <button type="submit" class="btn btn-danger btn-sm p-1">Hapus</button>
+                            </form>
                             </td>
                            </tr>
+                           @endforeach
                           </tbody>
                       </table>
                 </div>                

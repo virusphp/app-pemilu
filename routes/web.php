@@ -61,6 +61,9 @@ Route::put('/jadwal_kegiatan/update/{id}', [JadwalKegiatanController::class, 'up
 Route::get('/aspirasi', [AspirasiController::class, 'index'])->name('aspirasi.index');
 Route::get('/aspirasi/create', [AspirasiController::class, 'create'])->name('aspirasi.create');
 Route::post('/aspirasi/store', [AspirasiController::class, 'store'])->name('aspirasi.store');
+Route::get('/aspirasi/edit/{id}', [AspirasiController::class, 'edit'])->name('aspirasi.edit');
+Route::put('/aspirasi/update/{id}', [AspirasiController::class, 'update'])->name('aspirasi.update');
+Route::delete('/aspirasi/delete/{id}', [AspirasiController::class, 'delete'])->name('aspirasi.delete');
 
 Route::get('/issue', [IssueController::class, 'index'])->name('issue.index');
 Route::get('/issue/create', [IssueController::class, 'create'])->name('issue.create');
