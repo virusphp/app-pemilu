@@ -9,7 +9,7 @@ Dashboard
         <div class="card">
             <div class="card-header bg-white mt-2">
                 <div class="d-flex justify-content-between"><h4>Data Issue</h4>
-                    <a type="button" class="btn btn-info btn-sm" href="{{route('aspirasi.create') }}" >+ Tambah</a>
+                    <a type="button" class="btn btn-info btn-sm" href="{{route('issue.create') }}" >+ Tambah</a>
                 </div>
             </div>
             <div class="card-body">
@@ -28,19 +28,24 @@ Dashboard
                             </tr>
                           </thead>
                           <tbody>
-                           <tr >
-                            <td>1</td>
-                            <td>Adanya tim sukses caleg lain yang melakukan black campaign</td>
-                            <td>Bpk Dayat</td>
-                            <td>Krapyak</td>
-                            <td>Acc</td>
-                            <td>Melakukan Klarifikasi kepada yang bersangkutan langsung</td>
-                            <td>20 Agustus 2023</td>
+                            @foreach ($issue as $val)    
+                            <td>{{$loop->iteration}}</td>
+                            <td>{{$val->detail}}</td>
+                            <td>{{$val->sumber}}</td>
+                            <td>{{$val->wilayah}}</td>
+                            <td>{{$val->status}}</td>
+                            <td>{{$val->solusi}}</td>
+                            <td>{{$val->tanggal_pelaksanaan_solusi}}</td>
                             <td>
-                                <button type="button" class="btn btn-warning btn-sm p-1">Edit</button>
-                                <button type="button" class="btn btn-danger btn-sm p-1">Hapus</button>
+                                <form action="{{route('issue.delete', $val->id) }}" method="post">
+                                    @method('DELETE')
+                                    @csrf
+                                    <a type="button" class="btn btn-warning btn-sm p-1" href="{{route('issue.edit', $val->id) }}">Edit</a>
+                                    <button type="submit" class="btn btn-danger btn-sm p-1">Hapus</button>
+                            </form>
                             </td>
                            </tr>
+                           @endforeach
                           </tbody>
                       </table>
                 </div>                

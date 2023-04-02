@@ -67,6 +67,10 @@ Route::delete('/aspirasi/delete/{id}', [AspirasiController::class, 'delete'])->n
 
 Route::get('/issue', [IssueController::class, 'index'])->name('issue.index');
 Route::get('/issue/create', [IssueController::class, 'create'])->name('issue.create');
+Route::post('/issue/store', [IssueController::class, 'store'])->name('issue.store');
+Route::get('/issue/edit/{id}', [IssueController::class, 'edit'])->name('issue.edit');
+Route::put('/issue/update/{id}', [IssueController::class, 'update'])->name('issue.update');
+Route::delete('/issue/delete/{id}', [IssueController::class, 'delete'])->name('issue.delete');
 
 
 Route::get('/users', [UsersController::class, 'index'])->name('users.index');
