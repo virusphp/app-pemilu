@@ -31,7 +31,7 @@ Dashboard
             <div>
               <div>
                 <i class="bi bi-stopwatch mx-5" style="color:rgb(40, 194, 245); font-size: 4rem; "></i> 
-                <h4 class="justify-content-center mx-4 fw-semibold"> 245 Hari</h4> 
+                <h4 class="justify-content-center mx-4 fw-semibold"> {{$diff}} Hari</h4> 
                 <p class="justify-content-center mx-2"> Menjelang Pemilu</p>
               </div>
             </div>
@@ -61,7 +61,7 @@ Dashboard
             <div>
               <div>
                 <i class="bi bi-cash mx-5" style="color:rgb(238, 92, 73); font-size: 4rem; "></i> 
-                <h4 class="justify-content-center fw-semibold">Rp. 350.000.000</h4> 
+                <h4 class="justify-content-center fw-semibold">Rp. {{rupiah($budget)}}</h4> 
                 <p class="justify-content-center mx-4">Telah Dikeluarkan</p>
               </div>
             </div>
@@ -80,34 +80,25 @@ Dashboard
                 <table class="table table-sm table-hover">
                     <thead>
                         <tr>
-                            <th>Hari</th>
+                            <th>No</th>
                             <th>Tanggal</th>
                             <th>Pukul</th>
+                            <th>Nama Kegiatan</th>
                             <th>Tempat</th>
                             <th>Kegiatan</th>
                         </tr>
                       </thead>
                       <tbody>
                        <tr >
-                        <td>Senin</td>
-                        <td>12 Maret 2023</td>
-                        <td>13.00 WIB</td>
-                        <td>Lapangan Jetayu, Kota Pekalongan</td>
-                        <td>Kampanye dapil panjang</td>
-                       </tr>
-                       <tr >
-                        <td>Senin</td>
-                        <td>12 Maret 2023</td>
-                        <td>13.00 WIB</td>
-                        <td>Lapangan Jetayu, Kota Pekalongan</td>
-                        <td>Kampanye dapil panjang</td>
-                       </tr>
-                       <tr >
-                        <td>Senin</td>
-                        <td>12 Maret 2023</td>
-                        <td>13.00 WIB</td>
-                        <td>Lapangan Jetayu, Kota Pekalongan</td>
-                        <td>Kampanye dapil panjang</td>
+                        @foreach ($jadwal_kegiatan as $val) 
+                           <tr >
+                            <td>{{$loop->iteration}}</td>
+                            <td>{{$val->tgl_kegiatan}}</td>
+                            <td>{{$val->jam_kegiatan}}</td>
+                            <td>{{$val->nama_kegiatan}}</td>
+                            <td>{{$val->tempat_kegiatan}}</td>
+                            <td>{{$val->jenis_kegiatan}}</td>
+                            @endforeach
                        </tr>
                       </tbody>
                   </table>

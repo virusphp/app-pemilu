@@ -69,11 +69,11 @@
       <div class="container-fluid">
         <button class="header-toggler px-md-0 me-md-3" type="button" onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()">
           <svg class="icon icon-lg">
-            <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-menu"></use>
+            <use xlink:href="assets/icons/link.svg"></use>
           </svg>
-        </button><a class="header-brand d-md-none" href="#">
+        </button><a class="header-brand d-md-none bg-black" href="#">
           <svg width="118" height="46" alt="CoreUI Logo">
-            <use xlink:href="assets/brand/coreui.svg#full"></use>
+            <use xlink:href="assets/icons/link.svg"></use>
           </svg></a>
         <ul class="header-nav d-none d-md-flex">
           <li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>

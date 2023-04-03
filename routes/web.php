@@ -3,6 +3,7 @@
 use App\Http\Controllers\Backend\KoordinatorController;
 use App\Http\Controllers\Backend\RelawanController;
 use App\Http\Controllers\Backend\SaksiController;
+use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\PendukungController;
 use App\Http\Controllers\Backend\BudgetController;
 use App\Http\Controllers\Backend\JadwalKegiatanController;
@@ -28,9 +29,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/koordinator', [KoordinatorController::class, 'index'])->name('koordinator.index');
 Route::get('/koordinator/create', [KoordinatorController::class, 'create'])->name('koordinator.create');
