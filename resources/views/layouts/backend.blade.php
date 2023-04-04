@@ -35,30 +35,14 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
-  <!-- Vendors styles-->
-  {{-- <link rel="stylesheet" href="{{ asset('css/simplebar.css') }}"> --}}
-  <link rel="stylesheet" href="{{ asset('css/vendors/simplebar.css') }}">
   <!-- Main styles for this application-->
   <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-  <!-- We use those styles to show code examples, you should remove them in your application.-->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
-  <link href="{{ asset('css/examples.css') }}" rel="stylesheet">
+  {{-- CSS TOAST --}}
+  <link href="{{ asset('vendor/toastify-js/css/toastify.css') }}" rel="stylesheet">
+
   <!-- Global site tag (gtag.js) - Google Analytics-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    // Shared ID
-    gtag('config', 'UA-118965717-3');
-    // Bootstrap ID
-    gtag('config', 'UA-118965717-5');
-  </script>
-  <link href="vendors/@coreui/chartjs/css/coreui-chartjs.css" rel="stylesheet">
 </head>
 
 <body>
@@ -68,10 +52,10 @@
     <header class="header header-sticky mb-4">
       <div class="container-fluid">
         <button class="header-toggler px-md-0 me-md-3" type="button" onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()">
-          <svg class="icon icon-lg">
-            <use xlink:href="assets/icons/link.svg"></use>
-          </svg>
-        </button><a class="header-brand d-md-none bg-black" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+          </svg> 
+        </button><a class="header-brand d-md-none" href="#">
           <svg width="118" height="46" alt="CoreUI Logo">
             <use xlink:href="assets/icons/link.svg"></use>
           </svg></a>
@@ -81,18 +65,20 @@
           <li class="nav-item"><a class="nav-link" href="#">Settings</a></li>
         </ul>
         <ul class="header-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#">
-              <svg class="icon icon-lg">
-                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
-              </svg></a></li>
-          <li class="nav-item"><a class="nav-link" href="#">
-              <svg class="icon icon-lg">
-                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-list-rich"></use>
-              </svg></a></li>
-          <li class="nav-item"><a class="nav-link" href="#">
-              <svg class="icon icon-lg">
-                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-envelope-open"></use>
-              </svg></a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+                <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
+              </svg>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+              </svg>   
+            </a>
+          </li>
         </ul>
       </div>
       <div class="header-divider"></div>
@@ -108,17 +94,13 @@
       <div class="ms-auto">Powered by&nbsp;<a href="https://coreui.io/docs/">CoreUI UI Components</a></div>
     </footer>
   </div>
-  <!-- CoreUI and necessary plugins-->
-  <script src="{{ asset('vendors/@coreui/coreui/js/coreui.bundle.min.js') }}"></script>
-  <script src="{{ asset('vendors/simplebar/js/simplebar.min.js') }}"></script>
-  <!-- Plugins and scripts required by this view-->
-  <script src="{{ asset('vendors/chart.js/js/chart.min.js') }}"></script>
-  <script src="{{ asset('vendors/@coreui/chartjs/js/coreui-chartjs.js') }}"></script>
-  <script src="{{ asset('vendors/@coreui/utils/js/coreui-utils.js') }}"></script>
-  <script src="{{ asset('js/main.js') }}"></script>
-  <script>
-  </script>
 
+  {{-- Plugin --}}
+  <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
+  <script src="{{ asset('vendor/toastify-js/js/toastify.js') }}"></script>
+  
+  @include('layouts.partials._flash')
+  
 </body>
 
 </html>

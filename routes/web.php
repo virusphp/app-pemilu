@@ -33,15 +33,25 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['au
 
 Route::get('/koordinator', [KoordinatorController::class, 'index'])->name('koordinator.index');
 Route::get('/koordinator/create', [KoordinatorController::class, 'create'])->name('koordinator.create');
+Route::post('/koordinator/store', [KoordinatorController::class, 'store'])->name('koordinator.store');
+Route::get('/koordinator/edit/{id}', [KoordinatorController::class, 'edit'])->name('koordinator.edit');
+Route::put('/koordinator/update/{id}', [KoordinatorController::class, 'update'])->name('koordinator.update');
+Route::delete('/koordinator/delete/{id}', [KoordinatorController::class, 'delete'])->name('koordinator.delete');
+
 
 Route::get('/relawan', [RelawanController::class, 'index'])->name('relawan.index');
 Route::get('/relawan/create', [RelawanController::class, 'create'])->name('relawan.create');
+Route::post('/relawan/store', [RelawanController::class, 'store'])->name('relawan.store');
+Route::get('/relawan/edit/{id}', [RelawanController::class, 'edit'])->name('relawan.edit');
+Route::put('/relawan/update/{id}', [RelawanController::class, 'update'])->name('relawan.update');
+Route::delete('/relawan/delete/{id}', [RelawanController::class, 'delete'])->name('relawan.delete');
 
 Route::get('/saksi', [SaksiController::class, 'index'])->name('saksi.index');
 Route::get('/saksi/create', [SaksiController::class, 'create'])->name('saksi.create');
 
 Route::get('/pendukung', [PendukungController::class, 'index'])->name('pendukung.index');
 Route::get('/pendukung/create', [PendukungController::class, 'create'])->name('pendukung.create');
+Route::post('/pendukung/storage', [PendukungController::class, 'store'])->name('pendukung.store');
 
 Route::get('/budget', [BudgetController::class, 'index'])->name('budget.index');
 Route::get('/budget/create', [BudgetController::class, 'create'])->name('budget.create');
