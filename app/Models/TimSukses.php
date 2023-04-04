@@ -27,4 +27,9 @@ class TimSukses extends Model
     {
         return $query->where('jenis_tugas', '=', 'relawan');
     }
+
+    public function scopeSaksi($query)
+    {
+        return $query->where('jenis_tugas', '=', 'saksi');
+    }
 }
