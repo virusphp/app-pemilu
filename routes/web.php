@@ -49,6 +49,10 @@ Route::delete('/relawan/delete/{id}', [RelawanController::class, 'delete'])->nam
 
 Route::get('/saksi', [SaksiController::class, 'index'])->name('saksi.index');
 Route::get('/saksi/create', [SaksiController::class, 'create'])->name('saksi.create');
+Route::post('/saksi/store', [SaksiController::class, 'store'])->name('saksi.store');
+Route::get('/saksi/edit/{id}', [SaksiController::class, 'edit'])->name('saksi.edit');
+Route::put('/saksi/update/{id}', [SaksiController::class, 'update'])->name('saksi.update');
+Route::delete('/saksi/delete/{id}', [SaksiController::class, 'delete'])->name('saksi.delete');
 
 Route::get('/pendukung', [PendukungController::class, 'index'])->name('pendukung.index');
 Route::get('/pendukung/create', [PendukungController::class, 'create'])->name('pendukung.create');
