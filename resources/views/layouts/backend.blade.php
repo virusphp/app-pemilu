@@ -36,7 +36,7 @@
   <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
   <!-- Vendors styles-->
-  <link rel="stylesheet" href="{{ asset('vendors/simplebar/css/simplebar.css') }}">
+  {{-- <link rel="stylesheet" href="{{ asset('css/simplebar.css') }}"> --}}
   <link rel="stylesheet" href="{{ asset('css/vendors/simplebar.css') }}">
   <!-- Main styles for this application-->
   <link href="{{ asset('css/style.css') }}" rel="stylesheet">

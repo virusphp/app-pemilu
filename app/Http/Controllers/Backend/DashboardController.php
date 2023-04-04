@@ -14,19 +14,19 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        $jadwal_kegiatan = jadwal_kegiatan::all()->take(3);
+        $hariini = Carbon::now()->toDateString();
+        // dd($hariini);
+        $jadwal_kegiatan = jadwal_kegiatan::whereDate('tgl_kegiatan', '>', $hariini)->get()->take(3);
         // $pendukung = Pendukung::all()->count();
         // $koordinator = Koordinator::all()->count();
-        
-        $budget = Budgeting::where('status','=','1')->sum('nominal');
-        
+
+        $budget = Budgeting::where('status', '=', '1')->sum('nominal');
+
         $sekarang = Carbon::now();
         $pemilu = Carbon::parse('2024-02-14');
         $diff = $sekarang->diffInDays($pemilu);
 
 
-        return view('dashboard', compact('jadwal_kegiatan','budget','diff'));
+        return view('dashboard', compact('jadwal_kegiatan', 'budget', 'diff'));
     }
-
-    
 }

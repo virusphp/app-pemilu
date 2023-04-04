@@ -17,7 +17,7 @@ Dashboard
               <div>
                 <i class="bi bi-person-fill mx-5" style="color:orange; font-size: 4rem; "></i> 
                 <h4 class="justify-content-center mx-4 fw-semibold"> 20.000</h4> 
-                <p class="justify-content-center mx-4"> Pendukung</p>
+                <p class="justify-content-center mx-4 "> Pendukung</p>
               </div>
             </div>
            
