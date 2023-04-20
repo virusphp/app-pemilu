@@ -15,3 +15,8 @@ function status($nilai)
     }
     return $status;
 }
+
+function angka($orang)
+{
+    return number_format($orang, 0, '', '.');
+}

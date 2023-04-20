@@ -18,7 +18,7 @@
 
         <li class="nav-item"><a class="nav-link" href="{{ route('budget.index')}}">
             <i class="bi bi-currency-dollar mx-2"></i> Budget</a>
-        </li>
+        </li>        
 
         <li class="nav-item"><a class="nav-link" href="{{ route('koordinator.index')}}">
             <i class="bi bi-people-fill mx-2"></i> Koordinator</a>

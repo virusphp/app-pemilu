@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Models\Jadwal_kegiatan;
 use App\Models\Budgeting;
+use App\Models\Dpt;
 // use App\Models\Pendukung;
 // use App\Models\Koordinator;
 use Illuminate\Http\Request;
@@ -20,6 +21,7 @@ class DashboardController extends Controller
         // $pendukung = Pendukung::all()->count();
         // $koordinator = Koordinator::all()->count();
 
+        $dpt = Dpt::all()->count();
         $budget = Budgeting::where('status', '=', '1')->sum('nominal');
 
         $sekarang = Carbon::now();
@@ -27,6 +29,6 @@ class DashboardController extends Controller
         $diff = $sekarang->diffInDays($pemilu);
 
 
-        return view('dashboard', compact('jadwal_kegiatan', 'budget', 'diff'));
+        return view('dashboard', compact('jadwal_kegiatan', 'budget', 'diff', 'dpt'));
     }
 }

@@ -81,7 +81,7 @@
           </li>
         </ul>
       </div>
-      <div class="header-divider"></div>
+      {{-- <div class="header-divider"></div> --}}
      {{-- beadcrumb --}}
      @include('layouts.partials.breadcrumb')
     </header>
