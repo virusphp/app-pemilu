@@ -42,6 +42,9 @@
 
   <!-- Global site tag (gtag.js) - Google Analytics-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  
+  <!-- Javasripct-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
 </head>
 
@@ -98,6 +101,7 @@
   {{-- Plugin --}}
   <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
   <script src="{{ asset('vendor/toastify-js/js/toastify.js') }}"></script>
+  <script src="{{ asset('vendor/custom-chart.js') }}"></script>
   
   @include('layouts.partials._flash')
   

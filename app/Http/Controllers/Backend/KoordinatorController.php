@@ -44,7 +44,7 @@ class KoordinatorController extends Controller
         $data = $request->except('nik');
         $timsukses = TimSukses::find($id);
         $timsukses->update($data);
-         if ($timsukses) {
+        if ($timsukses) {
             Session::flash('data', ['type' => 'success', 'message' => 'Berhasil mengubah koordinator']);
             return redirect()->route('koordinator.index');
         } else {
@@ -57,7 +57,7 @@ class KoordinatorController extends Controller
     {
         $timsukses = TimSukses::find($id);
         $timsukses->delete();
-         if ($timsukses) {
+        if ($timsukses) {
             Session::flash('data', ['type' => 'success', 'message' => 'Berhasil menghapus koordinator']);
             return redirect()->route('koordinator.index');
         } else {

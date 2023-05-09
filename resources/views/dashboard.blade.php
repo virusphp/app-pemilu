@@ -271,9 +271,22 @@ Dashboard
         </div>
       </div>
       
-      <div class="col-lg-3">
+      <div class="col-lg-3 ">
+        
+       
+        <div class="card">
+          <div class="card-header bg-white ">
+              <div class="justify-content-between">
+                  <div>
+                      <h4 class=" mx-auto my-auto ">Estimasi Perolehan Suara</h4>
+                  </div>
+              </div>
+          </div>
+          <canvas class="mt-4 mb-5 pb-5" id="myChart" style="width:100%;max-width:600px"></canvas>       
+          <p>dari 30.000 DPT</p>   
+      </div>
         <div class="card mb-1 text-Black">
-          <h2 class="fs-4 fw-semibold mx-auto my-auto py-3">Top Koordinator</h2>
+          {{-- <h2 class="fs-4 fw-semibold mx-auto my-auto py-3">Top Koordinator</h2>
           <div class="container">
             <div class="table-responsive mb-5">
               <table class="table table-hover text-center">
@@ -312,10 +325,9 @@ Dashboard
                     </tr>
                     </tbody>
               </table>
-              
-                
             </div> 
-          </div>          
+          </div>  --}}
+          
         </div>
       </div>
       

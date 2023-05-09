@@ -21,16 +21,16 @@
         </li>        
 
         <li class="nav-item"><a class="nav-link" href="{{ route('koordinator.index')}}">
-            <i class="bi bi-people-fill mx-2"></i> Koordinator</a>
+            <i class="bi bi-people-fill mx-2"></i> Tim Sukses</a>
         </li>
 
-        <li class="nav-item"><a class="nav-link" href="{{ route('relawan.index')}}">
+        {{-- <li class="nav-item"><a class="nav-link" href="{{ route('relawan.index')}}">
             <i class="bi bi-person-badge mx-2"></i> Relawan</a>
          </li>
 
         <li class="nav-item"><a class="nav-link" href="{{ route('saksi.index')}}">
             <i class="bi bi-person-badge-fill mx-2"></i> Saksi</a>
-        </li>
+        </li> --}}
 
         <li class="nav-item"><a class="nav-link" href="{{ route('users.index')}}">
             <i class="bi bi-person-lock mx-2"></i>User</a>
