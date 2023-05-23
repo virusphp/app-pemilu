@@ -10,6 +10,7 @@ use App\Http\Controllers\Backend\JadwalKegiatanController;
 use App\Http\Controllers\Backend\AspirasiController;
 use App\Http\Controllers\Backend\IssueController;
 use App\Http\Controllers\Backend\DPTController;
+use App\Http\Controllers\Backend\WebsiteController;
 use App\Http\Controllers\Backend\UsersController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -84,6 +85,13 @@ Route::post('/issue/store', [IssueController::class, 'store'])->name('issue.stor
 Route::get('/issue/edit/{id}', [IssueController::class, 'edit'])->name('issue.edit');
 Route::put('/issue/update/{id}', [IssueController::class, 'update'])->name('issue.update');
 Route::delete('/issue/delete/{id}', [IssueController::class, 'delete'])->name('issue.delete');
+
+Route::get('/website', [WebsiteController::class, 'index'])->name('website.index');
+Route::get('/website/create', [WebsiteController::class, 'create'])->name('website.create');
+Route::post('/website/store', [WebsiteController::class, 'store'])->name('website.store');
+Route::get('/website/edit/{id}', [WebsiteController::class, 'edit'])->name('website.edit');
+Route::put('/website/update/{id}', [WebsiteController::class, 'update'])->name('website.update');
+Route::delete('/website/delete/{id}', [WebsiteController::class, 'delete'])->name('website.delete');
 
 
 Route::get('/users', [UsersController::class, 'index'])->name('users.index');

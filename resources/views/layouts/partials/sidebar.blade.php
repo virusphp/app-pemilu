@@ -42,10 +42,6 @@
             <i class="bi bi-calendar-check mx-2"></i> Jadwal Kegiatan</a>
         </li>
 
-        <li class="nav-item"><a class="nav-link" href="{{ route('dpt.index')}}">
-            <i class="bi bi-people-fill mx-2"></i>Data DPT</a>
-        </li>
-
         <li class="nav-item"><a class="nav-link" href="{{ route('aspirasi.index')}}">
                 <i class="bi bi-megaphone mx-2"></i>Data Aspirasi</a>
         </li>
@@ -58,23 +54,16 @@
             <i class="bi bi-escape mx-2"></i>Quick Count</a>
         </li>
 
-        <li class="nav-title">Website</li>
+        <li class="nav-title">Master</li>
 
-        <li class="nav-item"><a class="nav-link" href="{{ route('koordinator.index')}}">
-            <i class="bi bi-briefcase mx-2"></i> Visi & Misi</a>
+        <li class="nav-item"><a class="nav-link" href="{{ route('dpt.index')}}">
+            <i class="bi bi-people-fill mx-2"></i>Data DPT</a>
         </li>
 
-        <li class="nav-item"><a class="nav-link" href="{{ route('koordinator.index')}}">
-            <i class="bi bi-newspaper mx-2"></i>Program Kerja</a>
+        <li class="nav-item"><a class="nav-link" href="{{ route('website.index')}}">
+            <i class="bi bi-newspaper mx-2"></i>Website</a>
         </li>
 
-        <li class="nav-item"><a class="nav-link" href="{{ route('koordinator.index')}}">
-                <i class="bi bi-image mx-2"></i>Gallery Kegiatan</a>
-        </li>
-
-        <li class="nav-item"><a class="nav-link" href="{{ route('koordinator.index')}}">
-            <i class="bi bi-play-btn-fill mx-2"></i>Feedback Pendukung</a>
-        </li>
     </ul>
     
     <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
