@@ -11,7 +11,8 @@ use App\Http\Controllers\Backend\AspirasiController;
 use App\Http\Controllers\Backend\IssueController;
 use App\Http\Controllers\Backend\DPTController;
 use App\Http\Controllers\Backend\WebsiteController;
-use App\Http\Controllers\Backend\CalegController;
+use App\Http\Controllers\Backend\KandidatController;
+use App\Http\Controllers\Backend\ParpolController;
 use App\Http\Controllers\Backend\UsersController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -94,12 +95,19 @@ Route::get('/website/edit/{id}', [WebsiteController::class, 'edit'])->name('webs
 Route::put('/website/update/{id}', [WebsiteController::class, 'update'])->name('website.update');
 Route::delete('/website/delete/{id}', [WebsiteController::class, 'delete'])->name('website.delete');
 
-Route::get('/caleg', [CalegController::class, 'index'])->name('caleg.index');
-Route::get('/caleg/create', [CalegController::class, 'create'])->name('caleg.create');
-Route::post('/caleg/store', [CalegController::class, 'store'])->name('caleg.store');
-Route::get('/caleg/edit/{id}', [CalegController::class, 'edit'])->name('caleg.edit');
-Route::put('/caleg/update/{id}', [CalegController::class, 'update'])->name('caleg.update');
-Route::delete('/website/delete/{id}', [CalegController::class, 'delete'])->name('caleg.delete');
+Route::get('/kandidat', [KandidatController::class, 'index'])->name('kandidat.index');
+Route::get('/kandidat/create', [KandidatController::class, 'create'])->name('kandidat.create');
+Route::post('/kandidat/store', [KandidatController::class, 'store'])->name('kandidat.store');
+Route::get('/kandidat/edit/{id}', [KandidatController::class, 'edit'])->name('kandidat.edit');
+Route::put('/kandidat/update/{id}', [KandidatController::class, 'update'])->name('kandidat.update');
+Route::delete('/kandidat/delete/{id}', [KandidatController::class, 'delete'])->name('kandidat.delete');
+
+Route::get('/parpol', [ParpolController::class, 'index'])->name('parpol.index');
+Route::get('/parpol/create', [ParpolController::class, 'create'])->name('parpol.create');
+Route::post('/parpol/store', [ParpolController::class, 'store'])->name('parpol.store');
+Route::get('/parpol/edit/{id}', [ParpolController::class, 'edit'])->name('parpol.edit');
+Route::put('/parpol/update/{id}', [ParpolController::class, 'update'])->name('parpol.update');
+Route::delete('/parpol/delete/{id}', [ParpolController::class, 'delete'])->name('parpol.delete');
 
 Route::get('/users', [UsersController::class, 'index'])->name('users.index');
 Route::get('/users/create', [UsersController::class, 'create'])->name('users.create');

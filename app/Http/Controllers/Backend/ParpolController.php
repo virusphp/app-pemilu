@@ -7,46 +7,46 @@ use App\Http\Controllers\Controller;
 // use Database\Seeders\budgetingsseeder;
 use Illuminate\Http\Request;
 
-class CalegController extends Controller
+class ParpolController extends Controller
 {
     public function index()
     {
-        // $caleg = Caleg::all();
-        return view('caleg.index');
+        // $parpol = parpol::all();
+        return view('parpol.index');
     }
 
     public function create()
     {
-        return view('caleg.create');
+        return view('parpol.create');
     }
 
     public function store(Request $request)
     {
         //debug dummy dd($request->all());
         $data = $request->all();
-        $caleg = caleg::create($data);
-        return redirect()->route('caleg.index');
+        $parpol = parpol::create($data);
+        return redirect()->route('parpol.index');
     }
 
     public function delete($id)
     {
-        $caleg = caleg::find($id);
-        $caleg->delete();
-        return redirect()->route('caleg.index');
+        $parpol = parpol::find($id);
+        $parpol->delete();
+        return redirect()->route('parpol.index');
     }
 
     public function edit($id)
     {
-        $caleg = caleg::find($id);
-        return view('caleg.edit', compact('caleg'));
+        $parpol = parpol::find($id);
+        return view('parpol.edit', compact('parpol'));
     }
 
     public function update($id, Request $request)
     {
 
         $data = $request->all();
-        $caleg = caleg::find($id);
-        $caleg->update($data);
-        return redirect()->route('caleg.index');
+        $parpol = parpol::find($id);
+        $parpol->update($data);
+        return redirect()->route('parpol.index');
     }
 }
