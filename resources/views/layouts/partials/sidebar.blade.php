@@ -60,6 +60,10 @@
             <i class="bi bi-people-fill mx-2"></i>Data DPT</a>
         </li>
 
+        <li class="nav-item"><a class="nav-link" href="{{ route('caleg.index')}}">
+            <i class="bi bi-newspaper mx-2"></i>Data Kandidat</a>
+        </li>
+        
         <li class="nav-item"><a class="nav-link" href="{{ route('website.index')}}">
             <i class="bi bi-newspaper mx-2"></i>Website</a>
         </li>

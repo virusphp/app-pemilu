@@ -11,6 +11,7 @@ use App\Http\Controllers\Backend\AspirasiController;
 use App\Http\Controllers\Backend\IssueController;
 use App\Http\Controllers\Backend\DPTController;
 use App\Http\Controllers\Backend\WebsiteController;
+use App\Http\Controllers\Backend\CalegController;
 use App\Http\Controllers\Backend\UsersController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -93,6 +94,12 @@ Route::get('/website/edit/{id}', [WebsiteController::class, 'edit'])->name('webs
 Route::put('/website/update/{id}', [WebsiteController::class, 'update'])->name('website.update');
 Route::delete('/website/delete/{id}', [WebsiteController::class, 'delete'])->name('website.delete');
 
+Route::get('/caleg', [CalegController::class, 'index'])->name('caleg.index');
+Route::get('/caleg/create', [CalegController::class, 'create'])->name('caleg.create');
+Route::post('/caleg/store', [CalegController::class, 'store'])->name('caleg.store');
+Route::get('/caleg/edit/{id}', [CalegController::class, 'edit'])->name('caleg.edit');
+Route::put('/caleg/update/{id}', [CalegController::class, 'update'])->name('caleg.update');
+Route::delete('/website/delete/{id}', [CalegController::class, 'delete'])->name('caleg.delete');
 
 Route::get('/users', [UsersController::class, 'index'])->name('users.index');
 Route::get('/users/create', [UsersController::class, 'create'])->name('users.create');
