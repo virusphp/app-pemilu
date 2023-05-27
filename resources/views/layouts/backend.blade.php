@@ -1,16 +1,16 @@
+
 <!DOCTYPE html>
 <!--
 * CoreUI - Free Bootstrap Admin Template
-* @version v4.2.2
+* @version v4.2.1
 * @link https://coreui.io
 * Copyright (c) 2022 creativeLabs Łukasz Holeczek
 * Licensed under MIT (https://coreui.io/license)
 -->
 <!-- Breadcrumb-->
 <html lang="en">
-
-<head>
-  <base href="./">
+  <head>
+    <base href="./">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -46,10 +46,35 @@
   <!-- Javasripct-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
-</head>
 
-<body>
-  <!-- ?sidebar -->
+    <!-- Vendors styles-->
+    <link rel="stylesheet" href="{{asset("vendor/simplebar/css/simplebar.css")}}">
+    <link rel="stylesheet" href="css/vendors/simplebar.css">
+    <!-- Main styles for this application-->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- We use those styles to show code examples, you should remove them in your application.-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
+    <link href="css/examples.css" rel="stylesheet">
+    <script>
+      (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          'gtm.start': new Date().getTime(),
+          event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-KX4JH47');
+    </script>
+    <link href="{{asset("vendor/coreui/chartjs/css/coreui-chartjs.css") }}" rel="stylesheet">
+  </head>
+  <body>
+    
   @include('layouts.partials.sidebar')
   <div class="wrapper d-flex flex-column min-vh-100 bg-light">
     <header class="header header-sticky mb-4">
@@ -68,19 +93,21 @@
           <li class="nav-item"><a class="nav-link" href="#">Settings</a></li>
         </ul>
         <ul class="header-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
-                <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
-              </svg>
+        </ul>
+        <ul class="header-nav ms-3">
+          <li class="nav-item dropdown"><a class="nav-link py-0" data-coreui-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+              <div class="avatar avatar-md"><img class="avatar-img" src="assets/img/avatars/8.jpg" alt="user@email.com"></div>
             </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
-              </svg>   
-            </a>
+            <div class="dropdown-menu dropdown-menu-end pt-0">
+              
+              <a class="dropdown-item" href="#">
+                <svg class="icon me-2">
+                  <use xlink:href="assets/icons/link.svg#cil-user"></use>
+                </svg> Profile</a><a class="dropdown-item" href="#">
+                <svg class="icon me-2">
+                  <use xlink:href="assets/icons/link.svg#cil-account-logout"></use>
+                </svg> Logout</a>
+            </div>
           </li>
         </ul>
       </div>
@@ -88,23 +115,33 @@
      {{-- beadcrumb --}}
      @include('layouts.partials.breadcrumb')
     </header>
+
     <div class="body flex-grow-1 px-3">
     {{-- conten --}}
     @yield('content')
     </div>
+
+
     <footer class="footer">
       <div><a href="https://coreui.io">CoreUI </a><a href="https://coreui.io">Bootstrap Admin Template</a> © 2022 creativeLabs.</div>
       <div class="ms-auto">Powered by&nbsp;<a href="https://coreui.io/docs/">CoreUI UI Components</a></div>
     </footer>
   </div>
 
-  {{-- Plugin --}}
-  <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
-  <script src="{{ asset('vendor/toastify-js/js/toastify.js') }}"></script>
-  <script src="{{ asset('vendor/custom-chart.js') }}"></script>
-  
-  @include('layouts.partials._flash')
-  
-</body>
+    <!-- CoreUI and necessary plugins-->
+    <script src="{{ asset("vendor/coreui/coreui/js/coreui.bundle.min.js")}}"></script>
+    <script src="{{ asset("vendor/simplebar/js/simplebar.min.js")}}"></script>
+    <!-- Plugins and scripts required by this view-->
+    {{-- <script src="{{ asset("vendor/chart.js/js/chart.min.js") }}"></script>
+    <script src="{{ asset("vendor/coreui/chartjs/js/coreui-chartjs.js")}}"></script> --}}
+    <script src="{{ asset("vendor/coreui/utils/js/coreui-utils.js") }}"></script>
+    <script src="js/main.js"></script>
+    
+    <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('vendor/toastify-js/js/toastify.js') }}"></script>
+    <script src="{{ asset('vendor/custom-chart.js') }}"></script>
+    {{-- <script src="{{ asset('js/chart.js') }}"></script> --}}
 
+    @include('layouts.partials._flash')
+  </body>
 </html>

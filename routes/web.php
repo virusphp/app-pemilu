@@ -13,6 +13,7 @@ use App\Http\Controllers\Backend\DPTController;
 use App\Http\Controllers\Backend\WebsiteController;
 use App\Http\Controllers\Backend\KandidatController;
 use App\Http\Controllers\Backend\ParpolController;
+use App\Http\Controllers\Backend\TpsController;
 use App\Http\Controllers\Backend\UsersController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -108,6 +109,13 @@ Route::post('/parpol/store', [ParpolController::class, 'store'])->name('parpol.s
 Route::get('/parpol/edit/{id}', [ParpolController::class, 'edit'])->name('parpol.edit');
 Route::put('/parpol/update/{id}', [ParpolController::class, 'update'])->name('parpol.update');
 Route::delete('/parpol/delete/{id}', [ParpolController::class, 'delete'])->name('parpol.delete');
+
+Route::get('/tps', [TpsController::class, 'index'])->name('tps.index');
+Route::get('/tps/create', [TpsController::class, 'create'])->name('tps.create');
+Route::post('/tps/store', [TpsController::class, 'store'])->name('tps.store');
+Route::get('/tps/edit/{id}', [TpsController::class, 'edit'])->name('tps.edit');
+Route::put('/tps/update/{id}', [TpsController::class, 'update'])->name('tps.update');
+Route::delete('/tps/delete/{id}', [TpsController::class, 'delete'])->name('tps.delete');
 
 Route::get('/users', [UsersController::class, 'index'])->name('users.index');
 Route::get('/users/create', [UsersController::class, 'create'])->name('users.create');

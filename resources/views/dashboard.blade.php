@@ -282,8 +282,16 @@ Dashboard
                   </div>
               </div>
           </div>
-          <canvas class="mt-4 mb-5 pb-5" id="myChart" style="width:100%;max-width:600px"></canvas>       
-          <p>dari 30.000 DPT</p>   
+          
+          {{-- <div class="tab-content rounded-bottom">
+            <div class="tab-pane p-3 active preview" role="tabpanel" id="preview-893">
+              <div class="c-chart-wrapper">
+                <canvas id="canvas-3"></canvas>
+              </div>
+            </div>
+          </div> --}}
+          <canvas class="mt-5 mb-4 pb-3" id="myChart" style="width:100%; max-width:600px"></canvas>       
+          <p  class="text-center">dari 30.000 DPT</p>   
       </div>
         <div class="card mb-1 text-Black">
           {{-- <h2 class="fs-4 fw-semibold mx-auto my-auto py-3">Top Koordinator</h2>

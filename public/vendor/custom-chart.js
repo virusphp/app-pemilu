@@ -12,7 +12,7 @@ new Chart("myChart", {
     data: {
         labels: xValues,
         datasets: [{
-            backgroundColor: barColors,
+            backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
             data: yValues
         }]
     },
