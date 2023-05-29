@@ -15,6 +15,7 @@ use App\Http\Controllers\Backend\KandidatController;
 use App\Http\Controllers\Backend\ParpolController;
 use App\Http\Controllers\Backend\TpsController;
 use App\Http\Controllers\Backend\UsersController;
+use App\Http\Controllers\Backend\AkunController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -116,6 +117,13 @@ Route::post('/tps/store', [TpsController::class, 'store'])->name('tps.store');
 Route::get('/tps/edit/{id}', [TpsController::class, 'edit'])->name('tps.edit');
 Route::put('/tps/update/{id}', [TpsController::class, 'update'])->name('tps.update');
 Route::delete('/tps/delete/{id}', [TpsController::class, 'delete'])->name('tps.delete');
+
+Route::get('/akun', [AkunController::class, 'index'])->name('akun.index');
+Route::get('/akun/create', [AkunController::class, 'create'])->name('akun.create');
+Route::post('/akun/store', [AkunController::class, 'store'])->name('akun.store');
+Route::get('/akun/edit/{id}', [AkunController::class, 'edit'])->name('akun.edit');
+Route::put('/akun/update/{id}', [AkunController::class, 'update'])->name('akun.update');
+Route::delete('/akun/delete/{id}', [AkunController::class, 'delete'])->name('akun.delete');
 
 Route::get('/users', [UsersController::class, 'index'])->name('users.index');
 Route::get('/users/create', [UsersController::class, 'create'])->name('users.create');

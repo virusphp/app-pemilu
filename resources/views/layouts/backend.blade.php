@@ -100,10 +100,10 @@
             </a>
             <div class="dropdown-menu dropdown-menu-end pt-0">
               
-              <a class="dropdown-item" href="#">
+              <a class="dropdown-item" href="{{ route('akun.index')}}">
                 <svg class="icon me-2">
                   <use xlink:href="assets/icons/link.svg#cil-user"></use>
-                </svg> Profile</a><a class="dropdown-item" href="#">
+                </svg> Profile</a><a class="dropdown-item" href="">
                 <svg class="icon me-2">
                   <use xlink:href="assets/icons/link.svg#cil-account-logout"></use>
                 </svg> Logout</a>
