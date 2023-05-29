@@ -19,10 +19,9 @@ Dashboard
                             <tr>
                                 <th>No</th>
                                 <th>Nama Caleg</th>
-                                <th>Nama Alias</th>
                                 <th>Partai</th>
                                 <th>No Urut</th>
-                                <th>Alamat</th>
+                                <th>Alamat (basecamp)</th>
                                 <th>Medsos</th>
                                 <th>Action</th>
                             </tr>
@@ -30,7 +29,6 @@ Dashboard
                           <tbody>
                            <tr >                
                             <td>asd</td>
-                            <td>sasasaasd</td>
                             <td>asd</td>
                             <td>asdsa</td>
                             <td>asdas</td>

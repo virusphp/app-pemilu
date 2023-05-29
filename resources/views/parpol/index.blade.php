@@ -6,7 +6,7 @@ Dashboard
 @section('content')
 <div class="container-fluid">
     <div class="row mt-4">
-        <div class="card col-8 mx-auto">
+        <div class="card col-10 mx-auto">
             <div class="card-header bg-white mt-2">
                 <div class="d-flex justify-content-between"><h4>Data Parpol</h4>
                     <a type="button" class="btn btn-info btn-sm" href="sad" >+ Tambah</a>
@@ -18,6 +18,7 @@ Dashboard
                         <thead>
                             <tr  class="text-center">
                                 <th>No</th>
+                                <th>Logo Partai</th>
                                 <th>Nama Partai</th>
                                 <th>Jumlah Kandidat</th>
                                 <th>Action</th>
@@ -26,9 +27,12 @@ Dashboard
                           <tbody>
                            <tr >                
                             <td class="text-center">1</td>
+                            <td class="text-center">
+                                <img src="assets/img/avatars/user.png" style="width: 100px; height:100px;" alt="...">                                 
+                            </td>
                             <td>PDIP</td>
                             <td class="text-center">10 </td>
-                            <td class="text-center">
+                            <td class="text-center mx-auto">
                                 <form action="" method="post">
                                     @method('DELETE')
                                     @csrf
