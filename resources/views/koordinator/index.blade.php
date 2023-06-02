@@ -29,7 +29,7 @@
                                         <h4>Data Relawan</h4>
                                     </div>
                                     <div>
-                                        <a type="button" class="btn btn-info btn-sm" href="{{ route('relawan.create') }}">+Tambah</a>
+                                        <a type="button" class="btn btn-outline-primary  btn-sm" href="{{ route('relawan.create') }}">+Tambah</a>
                                     </div>
                                 </div>
                             </div>
@@ -38,17 +38,17 @@
                               
                             <div class="card-body">
                                 <div class="table-responsive">
-                                    <table class="table table-striped table-sm table-hover" style="white-space:nowrap;">
+                                    <table class="table  table-sm table-hover" style="white-space:nowrap;">
                                         <thead>
                                             <tr>
                                                 <th>No</th>
                                                 <th>Nama Lengkap</th>
                                                 <th>Panggilan</th>
+                                                <th>Tingkatan</th>
                                                 <th>Keanggotaan</th>
                                                 <th>Tipe</th>
                                                 <th>Jobdesk</th>
                                                 <th>Target</th>
-                                                <th>Sistem Honor</th>
                                                 <th>Action</th>
                                             </tr>
                                             </thead>
@@ -57,20 +57,20 @@
                                                 <td>1</td>
                                                 <td>Kristianto</td>
                                                 <td>Antok</td>
+                                                <td>Provinsi</td>
                                                 <td>Tim Media</td>
                                                 <td>Koordinator</td>
                                                 <td>Membuat Video Tiktok</td>
-                                                <td>Per Pendukung</td>
                                                 <td>200 pendukung</td>
                                                 <td>
                                                     <form action="" method="post">
                                                         @method('DELETE')
                                                         @csrf
-                                                        <button type="button" class="btn btn-success btn-sm p-1" data-coreui-toggle="modal" data-coreui-target="#staticBackdrop">
-                                                           detail
+                                                        <button type="button" class="btn btn-outline-primary btn-sm p-1 me-1" title="detail"  data-coreui-toggle="modal" data-coreui-target="#staticBackdrop">
+                                                            <i class="bi bi-eye"></i>
                                                           </button>
-                                                        <a type="button" class="btn btn-warning btn-sm p-1" href="">Edit</a>
-                                                        <button type="submit" class="btn btn-danger btn-sm p-1">Hapus</button>
+                                                        <a type="button" class="btn btn-outline-primary btn-sm p-1 me-1" title="edit" href=""><i class="bi bi-pencil-square"></i></a>
+                                                        <button type="submit" class="btn btn-outline-primary btn-sm p-1 me-1" title="hapus"><i class="bi bi-trash"></i></button>
                                                     </form>
                                                 </td>
                                             </tr>
@@ -78,18 +78,18 @@
                                                 <td>1</td>
                                                 <td>Kristianto</td>
                                                 <td>Antok</td>
+                                                <td>Kota / Kab</td>
                                                 <td>Tim Media</td>
                                                 <td>Koordinator</td>
                                                 <td>Membuat Video Tiktok</td>
-                                                <td>Per Pendukung</td>
                                                 <td>200 pendukung</td>
                                                 <td>
                                                     <form action="" method="post">
                                                         @method('DELETE')
                                                         @csrf
-                                                        <a type="button" class="btn btn-success btn-sm p-1" href="">detail</a>
-                                                        <a type="button" class="btn btn-warning btn-sm p-1" href="">Edit</a>
-                                                        <button type="submit" class="btn btn-danger btn-sm p-1">Hapus</button>
+                                                        <a type="button" class="btn btn-outline-primary btn-sm p-1 me-1" title="detail"  href=""><i class="bi bi-eye"></i></a>
+                                                        <a type="button" class="btn btn-outline-primary btn-sm p-1 me-1" title="edit" href=""><i class="bi bi-pencil-square"></i></a>
+                                                        <button type="submit" class="btn btn-outline-primary btn-sm p-1 me-1" title="hapus"><i class="bi bi-trash"></i></button>
                                                     </form>
                                                 </td>
                                             </tr>
@@ -97,18 +97,18 @@
                                                 <td>1</td>
                                                 <td>Kristianto</td>
                                                 <td>Antok</td>
+                                                <td>Kelurahan / Desa</td>
                                                 <td>Tim Media</td>
                                                 <td>Koordinator</td>
                                                 <td>Membuat Video Tiktok</td>
-                                                <td>Per Pendukung</td>
                                                 <td>200 pendukung</td>
                                                 <td>
                                                     <form action="" method="post">
                                                         @method('DELETE')
                                                         @csrf
-                                                        <a type="button" class="btn btn-success btn-sm p-1" href="">detail</a>
-                                                        <a type="button" class="btn btn-warning btn-sm p-1" href="">Edit</a>
-                                                        <button type="submit" class="btn btn-danger btn-sm p-1">Hapus</button>
+                                                        <a type="button" class="btn btn-outline-primary btn-sm p-1 me-1" title="detail" href=""><i class="bi bi-eye"></i></a>
+                                                        <a type="button" class="btn btn-outline-primary btn-sm p-1 me-1" title="edit" href=""><i class="bi bi-pencil-square"></i></a>
+                                                        <button type="submit" class="btn btn-outline-primary btn-sm p-1 me-1" title="hapus"><i class="bi bi-trash"></i></button>
                                                     </form>
                                                 </td>
                                             </tr>
@@ -356,7 +356,7 @@
                                     <div class="col-4"> 
                                         <div class="d-flex justify-content-between">
                                             <div>
-                                                <h5>Sistem Honor</h5>
+                                                <h5>Tingkatan Relawan</h5>
                                             </div>
                                             <div>
                                                 <a type="button" class="btn btn-info btn-sm" href="{{ route('koordinator.create') }}">+Tambah</a>
@@ -374,7 +374,7 @@
                                                 <tbody>
                                                     <tr>
                                                         <td>1</td>
-                                                        <td>Per Pendukung</td>
+                                                        <td>Provinsi</td>
                                                         <td>
                                                             <form action="" method="post">
                                                                 @method('DELETE')
@@ -386,7 +386,7 @@
                                                     </tr>
                                                     <tr>
                                                         <td>1</td>
-                                                        <td>AKhir Pemilu</td>
+                                                        <td>Kota /Kab</td>
                                                         <td>
                                                             <form action="" method="post">
                                                                 @method('DELETE')
@@ -436,7 +436,7 @@
                                     </div>
                                     <div class="col-lg-7 col-md-5 col-sm-5 col-5 mt-1">
                                         <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                            <div class="progress-bar bg-success" style="width: 25%">25%</div>
+                                            <div class="progress-bar bg-primary" style="width: 25%">25%</div>
                                         </div>  
                                     </div>
                                     <div class="col-lg-2 col-md-3 col-sm-3 col-3">
@@ -449,7 +449,7 @@
                                     </div>
                                     <div class="col-lg-7 col-md-5 col-sm-5 col-5 mt-1">
                                         <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                            <div class="progress-bar bg-success" style="width: 25%">25%</div>
+                                            <div class="progress-bar bg-primary" style="width: 75%">75%</div>
                                         </div>  
                                     </div>
                                     <div class="col-lg-2 col-md-3 col-sm-3 col-3">
@@ -462,7 +462,7 @@
                                     </div>
                                     <div class="col-lg-7 col-md-5 col-sm-5 col-5 mt-1">
                                         <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                            <div class="progress-bar bg-success" style="width: 25%">25%</div>
+                                            <div class="progress-bar bg-primary" style="width: 25%">25%</div>
                                         </div>  
                                     </div>
                                     <div class="col-lg-2 col-md-3 col-sm-3 col-3">
@@ -498,7 +498,7 @@
                                     </div>
                                     <div class="col-lg-7 col-md-5 col-sm-5 col-5 mt-1">
                                         <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                            <div class="progress-bar bg-success" style="width: 25%">25%</div>
+                                            <div class="progress-bar bg-primary" style="width: 25%">25%</div>
                                         </div>  
                                     </div>
                                     <div class="col-lg-2 col-md-3 col-sm-3 col-3">
@@ -511,7 +511,7 @@
                                     </div>
                                     <div class="col-lg-7 col-md-5 col-sm-5 col-5 mt-1">
                                         <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                            <div class="progress-bar bg-success" style="width: 25%">25%</div>
+                                            <div class="progress-bar bg-primary" style="width: 25%">25%</div>
                                         </div>  
                                     </div>
                                     <div class="col-lg-2 col-md-3 col-sm-3 col-3">
@@ -524,7 +524,7 @@
                                     </div>
                                     <div class="col-lg-7 col-md-5 col-sm-5 col-5 mt-1">
                                         <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                            <div class="progress-bar bg-success" style="width: 25%">25%</div>
+                                            <div class="progress-bar bg-primary" style="width: 25%">25%</div>
                                         </div>  
                                     </div>
                                     <div class="col-lg-2 col-md-3 col-sm-3 col-3">
@@ -545,9 +545,17 @@
                 </div>
                 
                 <div class="col-lg-4 mt-2">
-                    <div class="col-lg-12">
-                        <div class="row">
-                            <div class="col-lg-12">
+                    <div class="col-lg-12 ">
+                        <div class="row ">
+                            <div class="col-lg-12 mt-3 mb-1">
+                                <div class="">
+                                    <div>
+                                        <div class="fs-4 fw-semibold text-primary">Informasi Relawan</div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 mt-1">
                                 <div class="row">
                                     <div class="col-6">
                                         <div class="card">
@@ -582,41 +590,7 @@
                                     </div> 
                                 </div>
                             </div>
-                            <div class="col-lg-12 mt-2">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="card">
-                                            <div class="card-body  d-flex align-items-center">
-                                            <div class="bg-primary text-white p-2 me-3">
-                                                <div class="icon icon-xl">
-                                                    <i class="bi bi-person-fill text-center"></i> 
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <div class="fs-6 fw-semibold text-primary">Total Target</div>
-                                                <div class="text-medium-emphasis text-uppercase fw-semibold small">34.000 Pendukung</div>
-                                            </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="card">
-                                            <div class="card-body  d-flex align-items-center">
-                                            <div class="bg-primary text-white p-2 me-3">
-                                                <div class="icon icon-xl">
-                                                    <i class="bi bi-person-fill text-center"></i> 
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <div class="fs-6 fw-semibold text-primary">Total Koordinator</div>
-                                                <div class="text-medium-emphasis text-uppercase fw-semibold small">18 Orang</div>
-                                            </div>
-                                            </div>
-                                        </div>
-                                        </div>
-                                    </div> 
-                                </div>
-                            </div>
+                            
                             <div class="col-lg-12 mt-2">
                                 <div class="row">
                                     <div class="col-6">
@@ -706,7 +680,70 @@
                             </div> --}}
                     </div>  
                 </div>                                            
-        </div>        
+        </div> 
+
+        <div class="row mt-4">
+            <div class="col-lg-6">                  
+                <div class="card bg-primary">
+                    <div class="card-body d-flex align-items-center">
+                        <div class="row col-lg-12">                            
+                            <div class="col-lg-1">
+                                <div class="bg-primary text-white px-auto mx-auto">
+                                    <div class="icon icon-3xl">
+                                        <i class="bi bi-person-fill text-center"></i> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-11">
+                                <div class="fs-4 text-white fw-semibold">Total Target Pendukung</div>
+                                    <div class="row text-white ">
+                                        <div class="col-4 fw-semibold medium">34.000 Pendukung</div>
+                                        <div class="col-4"></div>
+                                        <div class="col-4 text-end"><b>5.000</b> <small>(25%)</small></div>
+                                    </div>                       
+                            </div>
+                            <div class="col-lg-1"></div>
+                            <div class="col-lg-11">
+                                <div class="progress progress-white progress-thin mt-3 justify-content-right">
+                                    <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" bis_skin_checked="1"></div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-lg-6">                  
+                <div class="card bg-primary">
+                    <div class="card-body d-flex align-items-center">
+                        <div class="row col-lg-12">                            
+                            <div class="col-lg-1">
+                                <div class="bg-primary text-white px-auto mx-auto">
+                                    <div class="icon icon-3xl">
+                                        <i class="bi bi-person-fill text-center"></i> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-11">
+                                <div class="fs-4 text-white fw-semibold">Total Target Selain Pendukung</div>
+                                    <div class="row text-white ">
+                                        <div class="col-4 fw-semibold medium">34.000 Lainnya</div>
+                                        <div class="col-4"></div>
+                                        <div class="col-4 text-end"><b>5.000</b> <small>(25%)</small></div>
+                                    </div>                       
+                            </div>
+                            <div class="col-lg-1"></div>
+                            <div class="col-lg-11">
+                                <div class="progress progress-white progress-thin mt-3 justify-content-right">
+                                    <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" bis_skin_checked="1"></div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>       
     </div>
 
 
