@@ -367,7 +367,7 @@
                                                 <thead>
                                                     <tr>
                                                         <th>No</th>
-                                                        <th>Target</th>
+                                                        <th>Tingkatan</th>
                                                         <th>Action</th>
                                                     </tr>
                                                 </thead>
