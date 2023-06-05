@@ -35,6 +35,9 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
+  
+  <link href="https://cdn.datatables.net/v/bs5/dt-1.13.4/b-2.3.6/datatables.min.css" rel="stylesheet"/> 
+  
   <!-- Main styles for this application-->
   <link href="{{ asset('css/style.css') }}" rel="stylesheet">
   {{-- CSS TOAST --}}
@@ -143,5 +146,15 @@
     {{-- <script src="{{ asset('js/chart.js') }}"></script> --}}
 
     @include('layouts.partials._flash')
+ 
+    <script src="https://cdn.datatables.net/v/bs5/dt-1.13.4/b-2.3.6/datatables.min.js"></script>
+    
+    
+    <script>
+      $(document).ready( function () {
+      $('#myTable').DataTable();
+      
+  } );
+      </script>
   </body>
 </html>

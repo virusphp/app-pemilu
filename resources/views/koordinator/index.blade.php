@@ -38,7 +38,7 @@
                               
                             <div class="card-body">
                                 <div class="table-responsive">
-                                    <table class="table  table-sm table-hover" style="white-space:nowrap;">
+                                    <table class="table  table-sm table-hover" id="myTable" >
                                         <thead>
                                             <tr>
                                                 <th>No</th>
@@ -115,7 +115,7 @@
                                             </tbody>
                                         </table>
                                 </div>    
-                                <nav aria-label="Page navigation example mx-auto my-auto ">
+                                {{-- <nav aria-label="Page navigation example mx-auto my-auto ">
                                     <ul class="pagination justify-content-center">
                                         <li class="page-item"><a class="page-link" href="#">Previous</a></li>
                                         <li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -123,7 +123,7 @@
                                         <li class="page-item"><a class="page-link" href="#">3</a></li>
                                         <li class="page-item"><a class="page-link" href="#">Next</a></li>
                                     </ul>
-                                </nav>            
+                                </nav>             --}}
                             </div> 
                         </div>
                         <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
@@ -883,5 +883,14 @@
         </div>
         </div>
     </div>
-
+    
+    <script>
+        $(document).ready( function () {
+        $('#myTable').DataTable();
+        
+    } );
+        </script>
 @endsection
+
+
+
