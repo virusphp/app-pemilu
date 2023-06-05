@@ -19,6 +19,7 @@
                                     </div>
                                     <div>
                                         <a type="button" class="btn btn-outline-primary  btn-sm" href="{{ route('relawan.create') }}">+Tambah</a>
+                                        <a type="button" class="btn btn-outline-primary  btn-sm" href="{{ route('relawan.create') }}">Ubah Status Masal</a>
                                     </div>
                                 </div>
                             </div>
