@@ -16,6 +16,7 @@ use App\Http\Controllers\Backend\ParpolController;
 use App\Http\Controllers\Backend\TpsController;
 use App\Http\Controllers\Backend\UsersController;
 use App\Http\Controllers\Backend\AkunController;
+use App\Http\Controllers\Backend\DtdcController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -124,6 +125,13 @@ Route::post('/akun/store', [AkunController::class, 'store'])->name('akun.store')
 Route::get('/akun/edit/{id}', [AkunController::class, 'edit'])->name('akun.edit');
 Route::put('/akun/update/{id}', [AkunController::class, 'update'])->name('akun.update');
 Route::delete('/akun/delete/{id}', [AkunController::class, 'delete'])->name('akun.delete');
+
+Route::get('/dtdc', [DtdcController::class, 'index'])->name('dtdc.index');
+Route::get('/dtdc/create', [DtdcController::class, 'create'])->name('dtdc.create');
+Route::post('/dtdc/store', [DtdcController::class, 'store'])->name('dtdc.store');
+Route::get('/dtdc/edit/{id}', [DtdcController::class, 'edit'])->name('dtdc.edit');
+Route::put('/dtdc/update/{id}', [DtdcController::class, 'update'])->name('dtdc.update');
+Route::delete('/dtdc/delete/{id}', [DtdcController::class, 'delete'])->name('dtdc.delete');
 
 Route::get('/users', [UsersController::class, 'index'])->name('users.index');
 Route::get('/users/create', [UsersController::class, 'create'])->name('users.create');

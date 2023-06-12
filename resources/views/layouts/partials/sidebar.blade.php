@@ -42,6 +42,10 @@
             <i class="bi bi-calendar-check mx-2"></i> Jadwal Kegiatan</a>
         </li>
 
+        <li class="nav-item"><a class="nav-link" href="{{ route('dtdc.index')}}">
+                <i class="bi bi-megaphone mx-2"></i>DTDC</a>
+        </li>
+
         <li class="nav-item"><a class="nav-link" href="{{ route('aspirasi.index')}}">
                 <i class="bi bi-megaphone mx-2"></i>Data Aspirasi</a>
         </li>

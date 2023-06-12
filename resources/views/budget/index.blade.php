@@ -411,7 +411,7 @@
                         <div class="fs-5 fw-semibold text-primary text-center">Pemasukan by Kategori</div>
                     </div>
                     <div class="row">
-                        <div class="col mt-4 ms-4">
+                        <div class="col-lg-12 mt-4 ms-4">
                             <div class="card-body d-flex align-items-center">
                                 <div class="bg-primary text-white p-2 me-3">
                                     <div class="icon icon-xl">
@@ -424,7 +424,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col mt-4 ms-4">
+                        <div class="col-lg-12 mt-4 ms-4">
                             <div class="card-body d-flex align-items-center">
                                 <div class="bg-primary text-white p-2 me-3">
                                     <div class="icon icon-xl">
@@ -437,7 +437,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col mt-4 ms-4">
+                        <div class="col-lg-12 mt-4 ms-4">
                             <div class="card-body d-flex align-items-center">
                                 <div class="bg-primary text-white p-2 me-3">
                                     <div class="icon icon-xl">
