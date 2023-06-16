@@ -121,15 +121,15 @@
      @include('layouts.partials.breadcrumb')
     </header>
 
-    <div class="body flex-grow-1 px-3">
+    <div class="body flex-grow-1 px-3 mb-4">
     {{-- conten --}}
     @yield('content')
     </div>
 
 
-    <footer class="footer">
-      <div><a href="https://coreui.io">CoreUI </a><a href="https://coreui.io">Bootstrap Admin Template</a> © 2022 creativeLabs.</div>
-      <div class="ms-auto">Powered by&nbsp;<a href="https://coreui.io/docs/">CoreUI UI Components</a></div>
+    <footer class="footer mt-4">
+      {{-- <div><a href="https://coreui.io">CoreUI </a><a href="https://coreui.io">Bootstrap Admin Template</a> © 2022 creativeLabs.</div>
+      <div class="ms-auto">Powered by&nbsp;<a href="https://coreui.io/docs/">CoreUI UI Components</a></div> --}}
     </footer>
   </div>
 
@@ -145,6 +145,7 @@
     <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('vendor/toastify-js/js/toastify.js') }}"></script>
     <script src="{{ asset('vendor/custom-chart.js') }}"></script>
+    <script src="{{ asset('vendor/custom-chart-kandidat.js') }}"></script>
     {{-- <script src="{{ asset('js/chart.js') }}"></script> --}}
 
     @include('layouts.partials._flash')

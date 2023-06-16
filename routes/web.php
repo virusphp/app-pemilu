@@ -17,6 +17,7 @@ use App\Http\Controllers\Backend\TpsController;
 use App\Http\Controllers\Backend\UsersController;
 use App\Http\Controllers\Backend\AkunController;
 use App\Http\Controllers\Backend\DtdcController;
+use App\Http\Controllers\Backend\QuickCountController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -132,6 +133,14 @@ Route::post('/dtdc/store', [DtdcController::class, 'store'])->name('dtdc.store')
 Route::get('/dtdc/edit/{id}', [DtdcController::class, 'edit'])->name('dtdc.edit');
 Route::put('/dtdc/update/{id}', [DtdcController::class, 'update'])->name('dtdc.update');
 Route::delete('/dtdc/delete/{id}', [DtdcController::class, 'delete'])->name('dtdc.delete');
+
+Route::get('/quickcount', [QuickCountController::class, 'index'])->name('quickcount.index');
+Route::get('/quickcount/create', [QuickCountController::class, 'create'])->name('quickcount.create');
+Route::post('/quickcount/store', [QuickCountController::class, 'store'])->name('quickcount.store');
+Route::get('/quickcount/edit/{id}', [QuickCountController::class, 'edit'])->name('quickcount.edit');
+Route::put('/quickcount/update/{id}', [QuickCountController::class, 'update'])->name('quickcount.update');
+Route::delete('/quickcount/delete/{id}', [QuickCountController::class, 'delete'])->name('quickcount.delete');
+
 
 Route::get('/users', [UsersController::class, 'index'])->name('users.index');
 Route::get('/users/create', [UsersController::class, 'create'])->name('users.create');

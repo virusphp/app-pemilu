@@ -54,7 +54,7 @@
             <i class="bi bi-ear mx-2"></i> Data Isue</a>
         </li>
 
-        <li class="nav-item"><a class="nav-link" href="{{ route('koordinator.index')}}">
+        <li class="nav-item"><a class="nav-link" href="{{ route('quickcount.index')}}">
             <i class="bi bi-escape mx-2"></i>Quick Count</a>
         </li>
 
