@@ -60,6 +60,10 @@
 
         <li class="nav-title">Master</li>
 
+        <li class="nav-item"><a class="nav-link" href="{{ route('chanel.index')}}">
+            <i class="bi bi-people-fill mx-2"></i>Versi Chanel</a>
+        </li>
+
         <li class="nav-item"><a class="nav-link" href="{{ route('dpt.index')}}">
             <i class="bi bi-people-fill mx-2"></i>Data DPT</a>
         </li>

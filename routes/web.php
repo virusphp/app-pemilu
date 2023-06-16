@@ -3,6 +3,7 @@
 use App\Http\Controllers\Backend\KoordinatorController;
 use App\Http\Controllers\Backend\RelawanController;
 use App\Http\Controllers\Backend\SaksiController;
+use App\Http\Controllers\Backend\ChanelController;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\PendukungController;
 use App\Http\Controllers\Backend\BudgetController;
@@ -59,6 +60,13 @@ Route::post('/saksi/store', [SaksiController::class, 'store'])->name('saksi.stor
 Route::get('/saksi/edit/{id}', [SaksiController::class, 'edit'])->name('saksi.edit');
 Route::put('/saksi/update/{id}', [SaksiController::class, 'update'])->name('saksi.update');
 Route::delete('/saksi/delete/{id}', [SaksiController::class, 'delete'])->name('saksi.delete');
+
+Route::get('/chanel', [ChanelController::class, 'index'])->name('chanel.index');
+Route::get('/chanel/create', [ChanelController::class, 'create'])->name('chanel.create');
+Route::post('/chanel/store', [ChanelController::class, 'store'])->name('chanel.store');
+Route::get('/chanel/edit/{id}', [ChanelController::class, 'edit'])->name('chanel.edit');
+Route::put('/chanel/update/{id}', [ChanelController::class, 'update'])->name('chanel.update');
+Route::delete('/chanel/delete/{id}', [ChanelController::class, 'delete'])->name('chanel.delete');
 
 Route::get('/pendukung', [PendukungController::class, 'index'])->name('pendukung.index');
 Route::get('/pendukung/create', [PendukungController::class, 'create'])->name('pendukung.create');
