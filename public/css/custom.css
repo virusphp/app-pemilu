@@ -1,0 +1,13 @@
+.warna-ungu {
+    background-color: #1900ff;
+    border-color: #321fdb;
+}
+
+.warna-hijau {
+    background-color: #2eb85c;
+    border-color: #2eb85c;
+}
+
+.modal-medium {
+    --cui-modal-width: 960px;
+}

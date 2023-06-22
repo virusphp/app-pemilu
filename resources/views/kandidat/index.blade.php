@@ -62,6 +62,86 @@ Dashboard
                                 </form>
                             </td>
                            </tr>
+                           <tr >                
+                            <td>asd</td>
+                            <td>asd</td>
+                            <td>asdsa</td>
+                            <td>asdas</td>
+                            <td>asda</td>
+                            <td><a href="" class="">asd</a></td>
+                            <td>
+                                <form action="" method="post">
+                                    @method('DELETE')
+                                    @csrf
+                                    <a type="button" class="btn btn-warning btn-sm p-1" href="sad">Edit</a>
+                                    <button type="submit" class="btn btn-danger btn-sm p-1">Hapus</button>
+                                </form>
+                            </td>
+                           </tr>
+                           <tr >                
+                            <td>asd</td>
+                            <td>asd</td>
+                            <td>asdsa</td>
+                            <td>asdas</td>
+                            <td>asda</td>
+                            <td><a href="" class="">asd</a></td>
+                            <td>
+                                <form action="" method="post">
+                                    @method('DELETE')
+                                    @csrf
+                                    <a type="button" class="btn btn-warning btn-sm p-1" href="sad">Edit</a>
+                                    <button type="submit" class="btn btn-danger btn-sm p-1">Hapus</button>
+                                </form>
+                            </td>
+                           </tr>
+                           <tr >                
+                            <td>asd</td>
+                            <td>asd</td>
+                            <td>asdsa</td>
+                            <td>asdas</td>
+                            <td>asda</td>
+                            <td><a href="" class="">asd</a></td>
+                            <td>
+                                <form action="" method="post">
+                                    @method('DELETE')
+                                    @csrf
+                                    <a type="button" class="btn btn-warning btn-sm p-1" href="sad">Edit</a>
+                                    <button type="submit" class="btn btn-danger btn-sm p-1">Hapus</button>
+                                </form>
+                            </td>
+                           </tr>
+                           <tr >                
+                            <td>asd</td>
+                            <td>asd</td>
+                            <td>asdsa</td>
+                            <td>asdas</td>
+                            <td>asda</td>
+                            <td><a href="" class="">asd</a></td>
+                            <td>
+                                <form action="" method="post">
+                                    @method('DELETE')
+                                    @csrf
+                                    <a type="button" class="btn btn-warning btn-sm p-1" href="sad">Edit</a>
+                                    <button type="submit" class="btn btn-danger btn-sm p-1">Hapus</button>
+                                </form>
+                            </td>
+                           </tr>
+                           <tr >                
+                            <td>asd</td>
+                            <td>asd</td>
+                            <td>asdsa</td>
+                            <td>asdas</td>
+                            <td>asda</td>
+                            <td><a href="" class="">asd</a></td>
+                            <td>
+                                <form action="" method="post">
+                                    @method('DELETE')
+                                    @csrf
+                                    <a type="button" class="btn btn-warning btn-sm p-1" href="sad">Edit</a>
+                                    <button type="submit" class="btn btn-danger btn-sm p-1">Hapus</button>
+                                </form>
+                            </td>
+                           </tr>
                           </tbody>
                       </table>
                 </div>                

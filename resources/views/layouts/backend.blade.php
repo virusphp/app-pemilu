@@ -60,6 +60,7 @@
     <!-- We use those styles to show code examples, you should remove them in your application.-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
     <link href="css/examples.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
     <script>
       (function(w, d, s, l, i) {
         w[l] = w[l] || [];

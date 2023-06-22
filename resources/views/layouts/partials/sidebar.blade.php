@@ -36,53 +36,60 @@
             <i class="bi bi-person-lock mx-2"></i>User</a>
         </li>
 
-        <li class="nav-title">Campaign</li>
+        <li class="nav-group" aria-expanded="false"><a class="nav-link nav-group-toggle fw-semibold " href="#">CAMPAIGN</a>
+            <ul class="nav-group-items" style="height: 0px;">
+                <li class="nav-item"><a class="nav-link" href="{{ route('jadwal_kegiatan.index')}}">
+                    <i class="bi bi-calendar-check mx-2"></i> Jadwal Kegiatan</a>
+                </li>
+        
+                <li class="nav-item"><a class="nav-link" href="{{ route('dtdc.index')}}">
+                        <i class="bi bi-megaphone mx-2"></i>DTDC</a>
+                </li>
+        
+                <li class="nav-item"><a class="nav-link" href="{{ route('aspirasi.index')}}">
+                        <i class="bi bi-megaphone mx-2"></i>Data Aspirasi</a>
+                </li>
+        
+                <li class="nav-item"><a class="nav-link" href="{{ route('issue.index')}}">
+                    <i class="bi bi-ear mx-2"></i> Data Isue</a>
+                </li>
+        
+                <li class="nav-item"><a class="nav-link" href="{{ route('quickcount.index')}}">
+                    <i class="bi bi-escape mx-2"></i>Quick Count</a>
+                </li>
+            </ul>
+          </li>
 
-        <li class="nav-item"><a class="nav-link" href="{{ route('jadwal_kegiatan.index')}}">
-            <i class="bi bi-calendar-check mx-2"></i> Jadwal Kegiatan</a>
-        </li>
+        
 
-        <li class="nav-item"><a class="nav-link" href="{{ route('dtdc.index')}}">
-                <i class="bi bi-megaphone mx-2"></i>DTDC</a>
-        </li>
-
-        <li class="nav-item"><a class="nav-link" href="{{ route('aspirasi.index')}}">
-                <i class="bi bi-megaphone mx-2"></i>Data Aspirasi</a>
-        </li>
-
-        <li class="nav-item"><a class="nav-link" href="{{ route('issue.index')}}">
-            <i class="bi bi-ear mx-2"></i> Data Isue</a>
-        </li>
-
-        <li class="nav-item"><a class="nav-link" href="{{ route('quickcount.index')}}">
-            <i class="bi bi-escape mx-2"></i>Quick Count</a>
-        </li>
-
-        <li class="nav-title">Master</li>
-
-        <li class="nav-item"><a class="nav-link" href="{{ route('chanel.index')}}">
-            <i class="bi bi-people-fill mx-2"></i>Versi Chanel</a>
-        </li>
-
-        <li class="nav-item"><a class="nav-link" href="{{ route('dpt.index')}}">
-            <i class="bi bi-people-fill mx-2"></i>Data DPT</a>
-        </li>
-
-        <li class="nav-item"><a class="nav-link" href="{{ route('tps.index')}}">
-            <i class="bi bi-people-fill mx-2"></i>Data TPS</a>
-        </li>
-
-        <li class="nav-item"><a class="nav-link" href="{{ route('kandidat.index')}}">
-            <i class="bi bi-newspaper mx-2"></i>Data Kandidat</a>
-        </li>
-
-        <li class="nav-item"><a class="nav-link" href="{{ route('parpol.index')}}">
-            <i class="bi bi-newspaper mx-2"></i>Data Parpol</a>
+        <li class="nav-group" aria-expanded="false"><a class="nav-link nav-group-toggle fw-semibold " href="#">MASTER</a>
+          <ul class="nav-group-items" style="height: 0px;">
+            <li class="nav-item"><a class="nav-link " href="{{ route('chanel.index')}}">
+                <i class="bi bi-people-fill mx-2"></i>Versi Pemilu</a>
+            </li>
+    
+            <li class="nav-item"><a class="nav-link" href="{{ route('dpt.index')}}">
+                <i class="bi bi-people-fill mx-2"></i>Data DPT</a>
+            </li>
+    
+            <li class="nav-item"><a class="nav-link" href="{{ route('tps.index')}}">
+                <i class="bi bi-people-fill mx-2"></i>Data TPS</a>
+            </li>
+    
+            <li class="nav-item"><a class="nav-link" href="{{ route('kandidat.index')}}">
+                <i class="bi bi-newspaper mx-2"></i>Data Kandidat</a>
+            </li>
+    
+            <li class="nav-item"><a class="nav-link" href="{{ route('parpol.index')}}">
+                <i class="bi bi-newspaper mx-2"></i>Data Parpol</a>
+            </li>
+            
+            <li class="nav-item"><a class="nav-link" href="{{ route('website.index')}}">
+                <i class="bi bi-newspaper mx-2"></i>Website</a>
+            </li>
+          </ul>
         </li>
         
-        <li class="nav-item"><a class="nav-link" href="{{ route('website.index')}}">
-            <i class="bi bi-newspaper mx-2"></i>Website</a>
-        </li>
 
     </ul>
     
